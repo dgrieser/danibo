@@ -146,17 +146,24 @@ details and photos for 24 hours, quotes/availability for 5 minutes. Use
 
 ## Results and GitHub Pages
 
-Finished searches live in [`results/`](results/) as self-contained HTML
-reports, published at **<https://dgrieser.github.io/danibo/>**.
-
-`tools/build_site.py` builds the site: it wraps each report in a proper
-document head (they are written without one), copies any raw-data files
-alongside, and generates an index from `results/reports.json`. Preview it
-locally with:
+Finished searches live in [`results/`](results/) as HTML reports, published
+at **<https://dgrieser.github.io/danibo/>**. Three tools produce them:
 
 ```sh
+# 1. one search per stay period; photos are shared between periods
+python3 tools/fetch_report_data.py 2026-10-17:2026-10-31 2026-10-24:2026-10-31
+
+# 2. one report per period, plus the results/reports.json manifest
+python3 tools/build_report.py
+
+# 3. the Pages site, previewable locally
 python3 tools/build_site.py && python3 -m http.server -d _site
 ```
+
+Only step 1 goes to the network. `build_site.py` wraps each report in a
+proper document head (they are written without one), copies `results/assets`
+and the raw-data files alongside, and generates the index from the manifest.
+Adding a period is one more `arrival:departure` argument in step 1.
 
 The `Pages` workflow runs the same command and deploys on every push to
 `main` that touches `results/`, the build script or the workflow itself.
