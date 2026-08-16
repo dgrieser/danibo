@@ -216,9 +216,10 @@ def build_index(out, entries, repo_url):
     <p>Preise und Verfügbarkeit sind Momentaufnahmen vom jeweiligen
     Erhebungsdatum — vor einer Buchung auf danibo.dk gegenprüfen.</p>
     <p>Quellcode und Reproduktionsbefehle im
-    <a href="{html.escape(repo_url)}">Repository</a>. Neue Berichte kommen nach
-    <code>results/</code> und werden in <code>results/reports.json</code>
-    eingetragen.</p>
+    <a href="{html.escape(repo_url)}">Repository</a>. Berichte und Übersicht werden mit
+    <code>tools/fetch_report_data.py</code> und <code>tools/build_report.py</code>
+    erzeugt — ein weiterer Zeitraum ist ein zusätzliches
+    <code>anreise:abreise</code>-Argument.</p>
   </div>
 </footer>
 </body>

@@ -86,16 +86,27 @@ def is_house(rec):
 
 
 def coverage(arrival, departure):
-    """How this period relates to the stay the family actually wanted."""
+    """How this period relates to the stay the family actually wanted.
+
+    Returns (kind, sentence). The sentence carries no trailing period so
+    callers can punctuate it themselves.
+    """
     a, b = d(arrival), d(departure)
+    wish = f"{WISH_FROM.day}.{WISH_FROM.month}. – {WISH_TO.day}.{WISH_TO.month}."
     if a <= WISH_FROM and b >= WISH_TO:
-        return "full", "Deckt 19.10. – 1.11. vollständig ab", []
-    missing = []
+        return "full", f"Deckt den Wunsch {wish} vollständig ab"
+    parts = []
     if a > WISH_FROM:
-        missing.append(f"{WISH_FROM.day}.–{(a - datetime.timedelta(days=1)).day}.10.")
+        parts.append(f"beginnt erst am {a.day}.{a.month}.")
     if b < WISH_TO:
-        missing.append(f"{b.day}.{b.month}.–{WISH_TO.day}.{WISH_TO.month}.")
-    return "partial", "Ohne " + " und ".join(missing), missing
+        parts.append(f"endet schon am {b.day}.{b.month}.")
+    sentence = " und ".join(parts)
+    return "partial", f"Gegenüber dem Wunsch {wish}: {sentence}"
+
+
+def sentence(text):
+    """German dates end in a period, so only add one where it is missing."""
+    return text if text.endswith(".") else text + "."
 
 
 def excerpt(text, limit=340):
@@ -441,7 +452,7 @@ def table_row(rank, rec):
 
 def span_card(ds, here, period_files):
     key = f"{ds['arrival']}:{ds['departure']}"
-    kind, note, _ = coverage(ds["arrival"], ds["departure"])
+    kind, note = coverage(ds["arrival"], ds["departure"])
     prices = [h["totalPrice"] for h in ds["houses"] if h["totalPrice"]]
     dates = f"{short(ds['arrival'])} → {short(ds['departure'])}"
     label = (dates if here
@@ -462,7 +473,7 @@ def build(ds, datasets, period_files):
     n_house = sum(1 for h in houses if is_house(h))
     n_ns = sum(1 for h in houses if "nonsmoking" in (h.get("facilities") or ()))
     prices = [h["totalPrice"] for h in houses if h["totalPrice"]]
-    kind, cover_note, gaps = coverage(ds["arrival"], ds["departure"])
+    kind, cover_note = coverage(ds["arrival"], ds["departure"])
     title = period_title(ds["arrival"], ds["departure"])
 
     spans = "".join(span_card(other, other is ds, period_files)
@@ -470,9 +481,7 @@ def build(ds, datasets, period_files):
     cards = "".join(card(i, h, period_files) for i, h in enumerate(houses, 1))
     rows = "".join(table_row(i, h) for i, h in enumerate(houses, 1))
 
-    cover_line = ("Dieser Zeitraum deckt den Wunsch 19.10. – 1.11. vollständig ab."
-                  if kind == "full" else
-                  f"Gegenüber dem Wunsch 19.10. – 1.11. fehlt {' und '.join(gaps)}.")
+    cover_line = sentence(cover_note)
 
     return f"""<title>{esc(title)}</title>
 <style>@font-face{{font-family:'Fraunces';font-style:normal;font-weight:600;
@@ -499,7 +508,7 @@ font-display:swap;src:url({FONT_URL}) format('woff2');}}{CSS}</style>
 
 <section class="tight">
   <div class="wrap">
-    <div class="note">
+    <div class="note{' calm' if kind == 'full' else ''}">
       <h3>Warum dieser Zeitraum?</h3>
       <p>Danibo vermietet auf Fanø in dieser Saison ausschließlich <strong>samstags bis
       samstags</strong> — geprüft über <code>danibo.py availability</code>: im Oktober und
@@ -667,7 +676,7 @@ def main():
         prices = [h["totalPrice"] for h in houses if h["totalPrice"]]
         n_house = sum(1 for h in houses if is_house(h))
         n_ns = sum(1 for h in houses if "nonsmoking" in (h.get("facilities") or ()))
-        kind, note, _ = coverage(ds["arrival"], ds["departure"])
+        kind, note = coverage(ds["arrival"], ds["departure"])
         manifest.append({
             "file": name,
             "title": period_title(ds["arrival"], ds["departure"]),
@@ -676,7 +685,7 @@ def main():
                     f"{ds['nights']} Nächte",
             "summary": f"Alle {len(houses)} buchbaren Unterkünfte für 2 Erwachsene und "
                        f"2 Kinder, nach Preis sortiert — mit Fotos, Ausstattung, Lage "
-                       f"und Nichtraucher-Status. {note}.",
+                       f"und Nichtraucher-Status. {sentence(note)}",
             "facts": [
                 f"{len(houses)} Objekte · {n_house} Häuser, {len(houses) - n_house} Wohnungen",
                 f"{money(min(prices))} – {money(max(prices))} € gesamt inkl. Nebenkosten",
