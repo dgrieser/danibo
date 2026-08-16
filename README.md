@@ -57,7 +57,7 @@ All filters of the website's "Erweiterte Suche" are supported:
 ```
 
 - `--location`: `rindby`, `fanoe-bad`, `soenderho`, `nordby` (repeatable)
-- `--type`: `house`, `hotel`, `camping`, `tent`
+- `--type`: `house`, `apartment`, `cluster`, `hotel`
 - `--facility` (repeatable): `washer`, `dishwasher`, `pool`, `whirlpool`,
   `sauna`, `seaview`, `stove`, `internet`, `nonsmoking`, `ev-charger`,
   `heatpump`, `activityroom`, `extra-toilet`, `luxury`

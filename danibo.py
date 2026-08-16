@@ -39,12 +39,14 @@ LOCATIONS = {
     "nordby": [45],
 }
 
-# House types from the site's Angular config ("houseType" query parameter).
+# House types for the "houseType" query parameter. The API exposes them via
+# /api/housetype as a plain array, so the wire value is the zero-based index
+# into ["House", "Apartment", "Cluster", "Hotel"] — not a 1-based id.
 HOUSE_TYPES = {
-    "house": 1,     # Ferienhaus
-    "hotel": 2,     # Hotel
-    "camping": 3,   # Camping
-    "tent": 4,      # Hütte
+    "house": 0,       # Ferienhaus
+    "apartment": 1,   # Ferienwohnung
+    "cluster": 2,     # Ferienanlage
+    "hotel": 3,       # Hotel
 }
 
 # Facility ids from the site's Angular config ("features" query parameter).
@@ -243,7 +245,7 @@ def search_houses(client, arrival, departure, adults=2, children=0, pets=0,
             params["locations"] = ",".join(str(i) for i in ids)
         if keyword:
             params["keyword"] = re.sub(r"['\"{}()]", "", keyword)
-        if house_type:
+        if house_type is not None:
             params["houseType"] = HOUSE_TYPES[house_type]
         if arrival:
             params["arrival"] = arrival
@@ -589,7 +591,7 @@ def build_parser():
     p.add_argument("--location", action="append", choices=sorted(LOCATIONS),
                    help="restrict to area, repeatable (rindby, fanoe-bad, soenderho, nordby)")
     p.add_argument("--type", choices=sorted(HOUSE_TYPES),
-                   help="accommodation type (house, hotel, camping, tent)")
+                   help="accommodation type (house, apartment, cluster, hotel)")
     p.add_argument("--facility", action="append", choices=sorted(FACILITIES),
                    help="required facility, repeatable (extended search checkboxes)")
     p.add_argument("--bedrooms", type=int, default=1, help="minimum bedrooms (default: 1)")
