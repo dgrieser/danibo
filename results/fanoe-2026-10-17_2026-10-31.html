@@ -1,0 +1,2525 @@
+<title>Fanø 17.–31. Oktober 2026</title>
+<style>@font-face{font-family:'Fraunces';font-style:normal;font-weight:600;
+font-display:swap;src:url(assets/fraunces-600.woff2) format('woff2');}
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --ground:#E7EAE6; --surface:#F8F9F6; --surface-2:#EFF2ED;
+  --ink:#17201D; --ink-2:#586661; --ink-3:#7C8A85;
+  --line:#CBD2CB; --line-soft:#DDE3DC;
+  --accent:#1E5A5E; --accent-ink:#123C40; --accent-soft:#D6E3E2; --on-accent:#F8F9F6;
+  --warm:#8F4526; --warm-soft:#F0DFD6;
+  --straw:#9A7A2E;
+  --shadow:0 1px 2px rgba(23,32,29,.06), 0 8px 24px -16px rgba(23,32,29,.35);
+  --radius:3px;
+  --display:'Fraunces','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;
+  --body:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,'SF Mono','DejaVu Sans Mono',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E1513; --surface:#151E1B; --surface-2:#1B2622;
+    --ink:#E4EAE5; --ink-2:#9CAAA4; --ink-3:#7B8983;
+    --line:#2A3733; --line-soft:#222E2A;
+    --accent:#7FBDBC; --accent-ink:#A9D6D4; --accent-soft:#1B3A3A; --on-accent:#0E1513;
+    --warm:#DE8B65; --warm-soft:#3A2419;
+    --straw:#CFA854;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E1513; --surface:#151E1B; --surface-2:#1B2622;
+  --ink:#E4EAE5; --ink-2:#9CAAA4; --ink-3:#7B8983;
+  --line:#2A3733; --line-soft:#222E2A;
+  --accent:#7FBDBC; --accent-ink:#A9D6D4; --accent-soft:#1B3A3A; --on-accent:#0E1513;
+  --warm:#DE8B65; --warm-soft:#3A2419;
+  --straw:#CFA854;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.8);
+}
+html{-webkit-text-size-adjust:100%}
+body{margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--body); font-size:16px; line-height:1.55}
+.wrap{max-width:1080px; margin:0 auto; padding:0 24px}
+a{color:var(--accent); text-underline-offset:2px}
+a:focus-visible,button:focus-visible,select:focus-visible{
+  outline:2px solid var(--accent); outline-offset:2px; border-radius:2px}
+
+.masthead{border-bottom:1px solid var(--line); background:var(--surface)}
+.masthead .wrap{padding-top:40px; padding-bottom:32px}
+.eyebrow{font-family:var(--mono); font-size:11px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--ink-3); margin:0 0 16px}
+.eyebrow a{color:var(--ink-3)}
+.eyebrow b{color:var(--accent); font-weight:600}
+h1{font-family:var(--display); font-weight:600; font-size:clamp(28px,4.6vw,46px);
+  line-height:1.06; letter-spacing:-.015em; margin:0 0 10px; text-wrap:balance}
+.dek{margin:0; max-width:62ch; color:var(--ink-2); font-size:17px}
+.brief{display:grid; gap:1px; background:var(--line-soft); border:1px solid var(--line-soft);
+  grid-template-columns:repeat(auto-fit,minmax(168px,1fr)); margin-top:28px}
+.brief div{background:var(--surface); padding:13px 15px}
+.brief dt{font-family:var(--mono); font-size:10.5px; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--ink-3); margin:0 0 5px}
+.brief dd{margin:0; font-size:15px; font-weight:600; line-height:1.35}
+.brief dd small{display:block; font-weight:400; color:var(--ink-2);
+  font-size:12.5px; margin-top:2px}
+
+.note{border-left:3px solid var(--warm); background:var(--warm-soft);
+  padding:16px 20px; margin:0 0 18px; border-radius:0 var(--radius) var(--radius) 0}
+.note.calm{border-left-color:var(--accent); background:var(--accent-soft)}
+.note h3{font-family:var(--body); font-size:14px; font-weight:700; margin:0 0 6px}
+.note p{margin:0 0 8px; font-size:14.5px; color:var(--ink); max-width:74ch}
+.note p:last-child{margin-bottom:0}
+.note code{font-family:var(--mono); font-size:12.5px; background:var(--surface);
+  padding:1px 5px; border-radius:2px; border:1px solid var(--line-soft)}
+
+section{padding:38px 0}
+section.tight{padding-top:28px}
+h2{font-family:var(--display); font-weight:600; font-size:clamp(21px,3vw,28px);
+  margin:0 0 6px; letter-spacing:-.01em; text-wrap:balance}
+.section-note{margin:0 0 22px; color:var(--ink-2); font-size:15px; max-width:70ch}
+
+.spans{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(228px,1fr))}
+.span{background:var(--surface); border:1px solid var(--line); padding:16px 17px;
+  border-radius:var(--radius); display:flex; flex-direction:column}
+.span.here{border-color:var(--accent); box-shadow:inset 0 0 0 1px var(--accent)}
+.span .tag{font-family:var(--mono); font-size:10px; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--ink-3); display:block; margin-bottom:7px}
+.span.here .tag{color:var(--accent)}
+.span .dates{font-size:16px; font-weight:700; margin-bottom:3px}
+.span .dates a{color:inherit; text-decoration:none}
+.span .dates a:hover{color:var(--accent); text-decoration:underline}
+.span .meta{font-size:13px; color:var(--ink-2); margin-bottom:11px}
+.span .stat{font-family:var(--mono); font-size:13px; font-variant-numeric:tabular-nums}
+.span .stat b{font-size:18px; font-weight:600}
+.span .cover{font-size:12.5px; margin:10px 0 0; padding-top:10px;
+  border-top:1px dashed var(--line); color:var(--ink-2)}
+.span .cover.full{color:var(--accent-ink); font-weight:600}
+
+.controls{position:sticky; top:0; z-index:20; background:var(--ground);
+  border-bottom:1px solid var(--line); padding:11px 0;
+  backdrop-filter:saturate(140%) blur(6px)}
+.controls .wrap{display:flex; flex-wrap:wrap; gap:9px; align-items:center}
+.ctl{font-family:var(--mono); font-size:12px; letter-spacing:.05em;
+  text-transform:uppercase; color:var(--ink-2); background:var(--surface);
+  border:1px solid var(--line); padding:7px 12px; border-radius:100px;
+  cursor:pointer; transition:background .15s,color .15s,border-color .15s}
+.ctl:hover{border-color:var(--accent)}
+.ctl[aria-pressed="true"]{background:var(--accent); border-color:var(--accent);
+  color:var(--on-accent)}
+select.ctl{text-transform:none; letter-spacing:0; padding-right:26px}
+.count{margin-left:auto; font-family:var(--mono); font-size:12px; color:var(--ink-3);
+  font-variant-numeric:tabular-nums}
+
+.list{display:flex; flex-direction:column; gap:16px; padding:26px 0 10px}
+.card{display:grid; grid-template-columns:296px 1fr; background:var(--surface);
+  border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;
+  box-shadow:var(--shadow)}
+.card.hide{display:none}
+.gallery{background:var(--surface-2); border-right:1px solid var(--line-soft);
+  display:grid; grid-template-rows:1fr auto; min-height:260px}
+.gallery .hero{display:block; width:100%; height:100%; min-height:200px;
+  object-fit:cover; background:var(--surface-2)}
+.gallery .strip{display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+  background:var(--line-soft)}
+.gallery .strip img{display:block; width:100%; aspect-ratio:1/1; object-fit:cover;
+  background:var(--surface-2)}
+.gallery .noimg{aspect-ratio:4/3; display:grid; place-items:center; color:var(--ink-3);
+  font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase}
+.body{padding:18px 22px 20px; min-width:0}
+.head{display:flex; gap:14px; align-items:flex-start; flex-wrap:wrap}
+.rank{font-family:var(--mono); font-size:12px; color:var(--ink-3);
+  border:1px solid var(--line); border-radius:100px; padding:2px 9px;
+  font-variant-numeric:tabular-nums; flex:none; margin-top:3px}
+.titleblock{flex:1 1 220px; min-width:0}
+.titleblock h3{font-family:var(--display); font-weight:600; font-size:21px;
+  margin:0 0 2px; letter-spacing:-.008em; line-height:1.2}
+.titleblock h3 a{color:inherit; text-decoration:none}
+.titleblock h3 a:hover{color:var(--accent)}
+.addr{margin:0; font-size:13.5px; color:var(--ink-2)}
+.addr .kat{font-family:var(--mono); font-size:11.5px; color:var(--ink-3)}
+.price{text-align:right; flex:none}
+.price .total{font-family:var(--mono); font-size:25px; font-weight:600;
+  color:var(--warm); font-variant-numeric:tabular-nums; line-height:1.1; display:block}
+.price .per{font-size:12px; color:var(--ink-2); font-family:var(--mono);
+  font-variant-numeric:tabular-nums}
+.rating{display:inline-flex; align-items:center; gap:5px; font-size:13px;
+  color:var(--ink-2); margin-top:6px}
+.rating .stars{color:var(--straw); letter-spacing:1px; font-size:12px}
+.rating .none{color:var(--ink-3); font-style:italic}
+.specs{display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+  background:var(--line-soft); border:1px solid var(--line-soft); margin:15px 0 13px}
+.specs div{background:var(--surface); padding:8px 10px}
+.specs dt{font-family:var(--mono); font-size:9.5px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink-3); margin:0 0 2px}
+.specs dd{margin:0; font-size:14px; font-weight:600; font-variant-numeric:tabular-nums}
+.chips{display:flex; flex-wrap:wrap; gap:5px; margin:0 0 12px}
+.chip{font-size:11.5px; padding:2.5px 8px; border-radius:100px;
+  background:var(--surface-2); border:1px solid var(--line-soft); color:var(--ink-2)}
+.chip.type{background:var(--accent-soft); border-color:transparent;
+  color:var(--accent-ink); font-weight:600}
+.chip.ns{background:var(--accent); border-color:transparent; color:var(--on-accent);
+  font-weight:600}
+.chip.ns-unknown{background:transparent; border-style:dashed; color:var(--ink-3)}
+.desc{font-size:14.5px; color:var(--ink-2); margin:0 0 14px; max-width:68ch}
+.actions{display:flex; flex-wrap:wrap; gap:9px; align-items:center}
+.btn{display:inline-block; font-size:13.5px; font-weight:600; text-decoration:none;
+  padding:8px 15px; border-radius:100px; background:var(--accent);
+  color:var(--on-accent); transition:filter .15s}
+.btn:hover{filter:brightness(1.12)}
+.btn.ghost{background:transparent; border:1px solid var(--line); color:var(--ink-2)}
+.btn.ghost:hover{border-color:var(--accent); color:var(--accent)}
+.altprices{font-family:var(--mono); font-size:12px; color:var(--ink-2);
+  margin:12px 0 0; padding-top:11px; border-top:1px dashed var(--line);
+  font-variant-numeric:tabular-nums}
+.altprices b{color:var(--ink); font-weight:600}
+.altprices a{white-space:nowrap; margin-right:14px; display:inline-block;
+  text-decoration:none}
+.altprices a:hover{text-decoration:underline}
+
+.tablewrap{overflow-x:auto; border:1px solid var(--line);
+  border-radius:var(--radius); background:var(--surface)}
+table{border-collapse:collapse; width:100%; font-size:13.5px; min-width:760px}
+th,td{padding:9px 12px; text-align:left; border-bottom:1px solid var(--line-soft)}
+th{font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ink-3); font-weight:400; background:var(--surface-2); position:sticky; top:0}
+td.num{text-align:right; font-family:var(--mono); font-variant-numeric:tabular-nums}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:var(--surface-2)}
+td a{text-decoration:none; font-weight:600}
+td a:hover{text-decoration:underline}
+
+footer{border-top:1px solid var(--line); background:var(--surface); margin-top:36px}
+footer .wrap{padding:34px 24px 46px}
+footer h2{font-size:19px; margin-bottom:14px}
+footer p{font-size:14px; color:var(--ink-2); max-width:76ch; margin:0 0 12px}
+pre{font-family:var(--mono); font-size:12.5px; line-height:1.65;
+  background:var(--surface-2); border:1px solid var(--line-soft);
+  border-radius:var(--radius); padding:14px 16px; overflow-x:auto; margin:0 0 14px;
+  color:var(--ink)}
+.legend{list-style:none; padding:0; margin:0 0 14px; font-size:14px; color:var(--ink-2)}
+.legend li{margin-bottom:6px; padding-left:16px; position:relative}
+.legend li::before{content:"—"; position:absolute; left:0; color:var(--ink-3)}
+
+@media (max-width:820px){
+  .card{grid-template-columns:1fr}
+  .gallery{border-right:none; border-bottom:1px solid var(--line-soft);
+    min-height:0; grid-template-rows:auto auto}
+  .gallery .hero{aspect-ratio:16/9; height:auto; min-height:0}
+  .specs{grid-template-columns:repeat(2,1fr)}
+  .price{text-align:left}
+  .wrap{padding:0 18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important; animation:none!important; scroll-behavior:auto!important}
+}
+</style>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow"><a href="index.html">Übersicht</a> · <b>Danibo</b> · Fanø, Dänemark</p>
+    <h1>Fanø 17.–31. Oktober 2026</h1>
+    <p class="dek">Alle 53 bei Danibo buchbaren Unterkünfte von
+    Sa 17. Oktober 2026 bis Sa 31. Oktober 2026 für zwei Erwachsene
+    und zwei Kinder (8 und 11 Jahre) — nach Gesamtpreis sortiert, mit Ausstattung,
+    Lage, Nichtraucher-Status und Bildern.</p>
+
+    <dl class="brief">
+      <div><dt>Zeitraum</dt><dd>Sa 17.10. – Sa 31.10.<small>14 Nächte</small></dd></div>
+      <div><dt>Belegung</dt><dd>2 Erw. + 2 Kinder<small>8 und 11 Jahre, keine Haustiere</small></dd></div>
+      <div><dt>Treffer</dt><dd>53 Objekte<small>30 Häuser · 23 Wohnungen</small></dd></div>
+      <div><dt>Preisspanne</dt><dd>768 – 3.442 €<small>Gesamt inkl. Nebenkosten</small></dd></div>
+      <div><dt>Nichtraucher</dt><dd>48 von 53<small>laut Danibo-Merkmal</small></dd></div>
+    </dl>
+  </div>
+</header>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="note">
+      <h3>Warum dieser Zeitraum?</h3>
+      <p>Danibo vermietet auf Fanø in dieser Saison ausschließlich <strong>samstags bis
+      samstags</strong> — geprüft über <code>danibo.py availability</code>: im Oktober und
+      November 2026 gibt es keine einzige Anreise an einem anderen Wochentag. Der Wunsch
+      „19.10. bis 1.11.“ ist deshalb nicht buchbar; jede Suche darauf liefert null Treffer.</p>
+      <p>Gegenüber dem Wunsch 19.10. – 1.11.: endet schon am 31.10. Es gibt vier buchbare Samstag-zu-Samstag-Varianten, jede mit einem
+      eigenen vollständigen Bericht — unten verlinkt. Bei jedem Objekt stehen außerdem
+      seine Preise in den anderen Zeiträumen.</p>
+    </div>
+    <div class="note calm">
+      <h3>Nichtraucher: 48 der 53 Objekte</h3>
+      <p>Danibo führt „Nichtraucher“ als eigenes Suchmerkmal, gesetzt bei 48 der
+      53 hier verfügbaren Unterkünfte — Häuser wie Wohnungen. „Rauchen erlaubt“
+      ist bei keinem Objekt hinterlegt.</p>
+      <p>Die Liste ist deshalb nicht hart gefiltert, sondern zeigt den Status als Kennzeichen.
+      Wo „keine Angabe“ steht, fehlt schlicht das gepflegte Merkmal — hier lohnt eine kurze
+      Rückfrage bei Danibo. Der Schalter <em>Nur Nichtraucher</em> grenzt auf die bestätigten
+      Objekte ein.</p>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <h2>Die vier buchbaren Zeiträume</h2>
+    <p class="section-note">Alle mit denselben Belegungsdaten geprüft. Die Zahl nennt
+    buchbare Objekte, der Preis den günstigsten Gesamtpreis.</p>
+    <div class="spans"><div class="span here">
+  <span class="tag">Dieser Bericht</span>
+  <div class="dates">Sa 17.10. → Sa 31.10.</div>
+  <div class="meta">14 Nächte</div>
+  <div class="stat"><b>53</b> Objekte · ab <b>768 €</b></div>
+  <p class="cover">Gegenüber dem Wunsch 19.10. – 1.11.: endet schon am 31.10.</p>
+</div><div class="span">
+  <span class="tag">Anderer Zeitraum</span>
+  <div class="dates"><a href="fanoe-2026-10-17_2026-11-07.html">Sa 17.10. → Sa 7.11.</a></div>
+  <div class="meta">21 Nächte</div>
+  <div class="stat"><b>39</b> Objekte · ab <b>1.093 €</b></div>
+  <p class="cover full">Deckt den Wunsch 19.10. – 1.11. vollständig ab</p>
+</div><div class="span">
+  <span class="tag">Anderer Zeitraum</span>
+  <div class="dates"><a href="fanoe-2026-10-24_2026-10-31.html">Sa 24.10. → Sa 31.10.</a></div>
+  <div class="meta">7 Nächte</div>
+  <div class="stat"><b>115</b> Objekte · ab <b>380 €</b></div>
+  <p class="cover">Gegenüber dem Wunsch 19.10. – 1.11.: beginnt erst am 24.10. und endet schon am 31.10.</p>
+</div><div class="span">
+  <span class="tag">Anderer Zeitraum</span>
+  <div class="dates"><a href="fanoe-2026-10-24_2026-11-07.html">Sa 24.10. → Sa 7.11.</a></div>
+  <div class="meta">14 Nächte</div>
+  <div class="stat"><b>81</b> Objekte · ab <b>705 €</b></div>
+  <p class="cover">Gegenüber dem Wunsch 19.10. – 1.11.: beginnt erst am 24.10.</p>
+</div></div>
+  </div>
+</section>
+
+<div class="controls">
+  <div class="wrap">
+    <button class="ctl" id="f-house" aria-pressed="false">Nur Häuser</button>
+    <button class="ctl" id="f-ns" aria-pressed="false">Nur Nichtraucher</button>
+    <button class="ctl" id="f-kid" aria-pressed="false">Pool / Aktivitätsraum</button>
+    <select class="ctl" id="sort" aria-label="Sortierung">
+      <option value="price">Sortierung: Preis aufsteigend</option>
+      <option value="price-desc">Sortierung: Preis absteigend</option>
+      <option value="sqm">Sortierung: Wohnfläche</option>
+      <option value="coast">Sortierung: Strandnähe</option>
+      <option value="rating">Sortierung: Bewertung</option>
+    </select>
+    <span class="count" id="count"></span>
+  </div>
+</div>
+
+<section style="padding-top:0">
+  <div class="wrap"><div class="list" id="list">
+<article class="card" id="h5461" data-type="apartment"
+         data-ns="1"
+         data-price="768" data-sqm="60"
+         data-coast="3000" data-rating="4.93"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/5461-0.jpg" alt="Ferienwohnung 01402, Sønderho" loading="lazy"><div class="strip"><img src="assets/photos/5461-1.jpg" alt="" loading="lazy"><img src="assets/photos/5461-2.jpg" alt="" loading="lazy"><img src="assets/photos/5461-3.jpg" alt="" loading="lazy"><img src="assets/photos/5461-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">01</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=5461&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Gammeltoft Vej 8 G</a></h3>
+        <p class="addr">Sønderho, Fanø <span class="kat">· Kat.-Nr. 01402</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.93 · 5 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">768&nbsp;€</span>
+        <span class="per">55 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>2</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>60 m²</dd></div><div><dt>Baujahr</dt><dd>1951</dd></div><div><dt>Zum Strand</dt><dd>3,0 km</dd></div><div><dt>Einkauf</dt><dd>2,1 km</dd></div><div><dt>Haustiere</dt><dd>2</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Geschirrspüler</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Danibo vermietet hier 3 einfache und günstige Ferienwohnungen (vier bis sechs Personen) auf der ”Farm Rudbeck” - gelegen in der schönsten Natur von Fanø, direkt an der Nordsee und mit dem einzigartigen Vogelleben, das so typisch ist für diesen Teil der Insel.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=5461&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.366753,8.463356" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h5461">Sa 17.10.–Sa 7.11. <b>1.093 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h5461">Sa 24.10.–Sa 31.10. <b>380 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h5461">Sa 24.10.–Sa 7.11. <b>705 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3245" data-type="apartment"
+         data-ns="1"
+         data-price="870" data-sqm="58"
+         data-coast="450" data-rating="4.41"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3245-0.jpg" alt="Ferienwohnung 01017, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/3245-1.jpg" alt="" loading="lazy"><img src="assets/photos/3245-2.jpg" alt="" loading="lazy"><img src="assets/photos/3245-3.jpg" alt="" loading="lazy"><img src="assets/photos/3245-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">02</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3245&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 42S</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 01017</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.41 · 9 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">870&nbsp;€</span>
+        <span class="per">62 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>5</dd></div><div><dt>Schlafz.</dt><dd>2</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>58 m²</dd></div><div><dt>Baujahr</dt><dd>1992</dd></div><div><dt>Zum Strand</dt><dd>450 m</dd></div><div><dt>Einkauf</dt><dd>1,1 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Kabel-TV. Chrome Cast. Die Apartment-Anlage &quot;Fiskerhusene&quot; in Fanø Bad wurde 1991 errichtet. Bei allen Wohnungen ist der 1. Stock vorhanden, und man kann dort 4-6 Personen wohnen. Im Erdgeschoss finden Sie offene Küche m. Eßplatz, Wohnraum, Ausgang zu kleinen Terrasse sowie eine Treppe zum 1. Stock.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3245&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.43488,8.369642" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h3245">Sa 17.10.–Sa 7.11. <b>1.188 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h3245">Sa 24.10.–Sa 31.10. <b>387 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h3245">Sa 24.10.–Sa 7.11. <b>705 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h5462" data-type="apartment"
+         data-ns="1"
+         data-price="887" data-sqm="60"
+         data-coast="3000" data-rating="4.5"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/5462-0.jpg" alt="Ferienwohnung 01403, Sønderho" loading="lazy"><div class="strip"><img src="assets/photos/5462-1.jpg" alt="" loading="lazy"><img src="assets/photos/5462-2.jpg" alt="" loading="lazy"><img src="assets/photos/5462-3.jpg" alt="" loading="lazy"><img src="assets/photos/5462-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">03</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=5462&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Gammeltoft Vej 8 H</a></h3>
+        <p class="addr">Sønderho, Fanø <span class="kat">· Kat.-Nr. 01403</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.50 · 4 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">887&nbsp;€</span>
+        <span class="per">63 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>60 m²</dd></div><div><dt>Baujahr</dt><dd>1951</dd></div><div><dt>Zum Strand</dt><dd>3,0 km</dd></div><div><dt>Einkauf</dt><dd>2,1 km</dd></div><div><dt>Haustiere</dt><dd>2</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Danibo vermietet hier 3 einfache und günstige Ferienwohnungen (vier bis sechs Personen) auf der ”Farm Rudbeck” - gelegen in der schönsten Natur von Fanø, direkt an der Nordsee und mit dem einzigartigen Vogelleben, das so typisch ist für diesen Teil der Insel.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=5462&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.366722,8.463475" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h5462">Sa 17.10.–Sa 7.11. <b>1.256 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h5462">Sa 24.10.–Sa 31.10. <b>434 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h5462">Sa 24.10.–Sa 7.11. <b>803 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3364" data-type="apartment"
+         data-ns="1"
+         data-price="924" data-sqm="71"
+         data-coast="300" data-rating="4.58"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3364-0.jpg" alt="Ferienwohnung 01330, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/3364-1.jpg" alt="" loading="lazy"><img src="assets/photos/3364-2.jpg" alt="" loading="lazy"><img src="assets/photos/3364-3.jpg" alt="" loading="lazy"><img src="assets/photos/3364-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">04</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3364&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Golfstien 3 H, lejl. 30</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 01330</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.58 · 4 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">924&nbsp;€</span>
+        <span class="per">66 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>5</dd></div><div><dt>Schlafz.</dt><dd>2</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>71 m²</dd></div><div><dt>Baujahr</dt><dd>1992</dd></div><div><dt>Zum Strand</dt><dd>300 m</dd></div><div><dt>Einkauf</dt><dd>1,2 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Geschirrspüler</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Die Wohnung Nr. 30 ist 71 m2 groß, für 5 Pers. und sie ist schön und modern eingerichtet. Küche mit Geschirrspüler und Mikrowelle sowie in offener Verbindung zum schönen Wohnbereich. Badezimmer mit Fußbodenheizung. Es gibt 2 Schlafzimmer. Eins mit einem Doppelbett und das andere mit einem Doppel- und einem Einzelbett.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3364&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.43549,8.368428" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-24_2026-10-31.html#h3364">Sa 24.10.–Sa 31.10. <b>422 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3356" data-type="apartment"
+         data-ns="1"
+         data-price="954" data-sqm="88"
+         data-coast="300" data-rating="4.44"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3356-0.jpg" alt="Ferienwohnung 01315, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/3356-1.jpg" alt="" loading="lazy"><img src="assets/photos/3356-2.jpg" alt="" loading="lazy"><img src="assets/photos/3356-3.jpg" alt="" loading="lazy"><img src="assets/photos/3356-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">05</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3356&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Golfstien 1 C, lejl. 15</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 01315</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.44 · 3 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">954&nbsp;€</span>
+        <span class="per">68 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>5</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>88 m²</dd></div><div><dt>Baujahr</dt><dd>1992</dd></div><div><dt>Zum Strand</dt><dd>300 m</dd></div><div><dt>Einkauf</dt><dd>1,2 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Internet</span></div>
+    <p class="desc">Gemütliche und gut eingerichtete Ferienwohnung mit 88 m² Wohnfläche für bis zu 5 Personen. Die Wohnung verfügt über eine schöne und praktische Küche, u. a. mit Geschirrspüler. Badezimmer mit Waschmaschine. Zur Ausstattung gehören Kabel-TV, Radio mit CD-Player sowie kostenloses WLAN.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3356&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.435156,8.36817" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h3356">Sa 17.10.–Sa 7.11. <b>1.312 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h3356">Sa 24.10.–Sa 31.10. <b>428 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h3356">Sa 24.10.–Sa 7.11. <b>786 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3353" data-type="apartment"
+         data-ns="1"
+         data-price="982" data-sqm="85"
+         data-coast="300" data-rating="4.62"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3353-0.jpg" alt="Ferienwohnung 01306, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/3353-1.jpg" alt="" loading="lazy"><img src="assets/photos/3353-2.jpg" alt="" loading="lazy"><img src="assets/photos/3353-3.jpg" alt="" loading="lazy"><img src="assets/photos/3353-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">06</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3353&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Golfstien 7 A. Lejl. 6</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 01306</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.62 · 7 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">982&nbsp;€</span>
+        <span class="per">70 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>85 m²</dd></div><div><dt>Baujahr</dt><dd>1992</dd></div><div><dt>Zum Strand</dt><dd>300 m</dd></div><div><dt>Einkauf</dt><dd>1,2 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Kabel TV. Wärmepumpe. Diese Ferienwohnung, Nr. 6, ist 85 qm gross und für bis zu 6 Personen eingerichtet. 3 Schlafzimmer, 2 davon mit Doppelbetten und das dritte mit 2 Einzelbetten. Babybett. Moderne Küche mit Geschirrspüler und Mikrowelle. Badezimmer mit Fussbodenheizung. Waschmaschine und Trockner.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3353&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.43557,8.367537" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h3353">Sa 17.10.–Sa 7.11. <b>1.353 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h3353">Sa 24.10.–Sa 31.10. <b>443 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h3353">Sa 24.10.–Sa 7.11. <b>814 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3354" data-type="apartment"
+         data-ns="1"
+         data-price="997" data-sqm="85"
+         data-coast="300" data-rating="4.53"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3354-0.jpg" alt="Ferienwohnung 01307, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/3354-1.jpg" alt="" loading="lazy"><img src="assets/photos/3354-2.jpg" alt="" loading="lazy"><img src="assets/photos/3354-3.jpg" alt="" loading="lazy"><img src="assets/photos/3354-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">07</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3354&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Golfstien 7 B, lejl. 7</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 01307</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.53 · 10 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">997&nbsp;€</span>
+        <span class="per">71 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>85 m²</dd></div><div><dt>Baujahr</dt><dd>1992</dd></div><div><dt>Zum Strand</dt><dd>300 m</dd></div><div><dt>Einkauf</dt><dd>1,2 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Kabel TV. Diese Ferienwohnung, Nr. 7, ist 85 qm gross und für bis zu 6 Personen eingerichtet. 3 Schlafzimmer, 2 davon mit Doppelbetten und das dritte mit 2 Einzelbetten. Moderne Küche mit Geschirrspüler und Mikrowelle. Badezimmer mit Fussbodenheizung. Waschmaschine und Trockner.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3354&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.435509,8.367602" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h3354">Sa 17.10.–Sa 7.11. <b>1.363 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h3354">Sa 24.10.–Sa 31.10. <b>438 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h3354">Sa 24.10.–Sa 7.11. <b>804 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3092" data-type="house"
+         data-ns="0"
+         data-price="1007" data-sqm="64"
+         data-coast="1400" data-rating="4.33"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3092-0.jpg" alt="Ferienhaus 00801, Sønderho" loading="lazy"><div class="strip"><img src="assets/photos/3092-1.jpg" alt="" loading="lazy"><img src="assets/photos/3092-2.jpg" alt="" loading="lazy"><img src="assets/photos/3092-3.jpg" alt="" loading="lazy"><img src="assets/photos/3092-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">08</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3092&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Bjerges Leje 43</a></h3>
+        <p class="addr">Sønderho, Fanø <span class="kat">· Kat.-Nr. 00801</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.33 · 6 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.007&nbsp;€</span>
+        <span class="per">72 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>64 m²</dd></div><div><dt>Baujahr</dt><dd>1976</dd></div><div><dt>Zum Strand</dt><dd>1,4 km</dd></div><div><dt>Einkauf</dt><dd>1,3 km</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns-unknown">Keine Angabe zum Rauchen</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Internet</span></div>
+    <p class="desc">Kabel TV. Offener Kamin. Gratis Internetzugang über W-LAN. Älteres bescheidenes Ferienhaus mit Lage an grossem und schönem Naturgebiet in Sønderho. Gemütlicher Wohnraum mit Parkettfußboden aus Eschenholz. Bad mit Fußbodenheizung. Waschmaschine. Mikrowellenherd. Schaukel und Sandkasten. Radio m. CD-Spieler. Haustier ist erlaubt.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3092&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.355221,8.450136" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-24_2026-10-31.html#h3092">Sa 24.10.–Sa 31.10. <b>486 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3380" data-type="apartment"
+         data-ns="1"
+         data-price="1017" data-sqm="48"
+         data-coast="20" data-rating="4.71"
+         data-kid="2">
+  <div class="gallery"><img class="hero" src="assets/photos/3380-0.jpg" alt="Ferienwohnung 10219, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/3380-1.jpg" alt="" loading="lazy"><img src="assets/photos/3380-2.jpg" alt="" loading="lazy"><img src="assets/photos/3380-3.jpg" alt="" loading="lazy"><img src="assets/photos/3380-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">09</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3380&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, A 219</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 10219</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.71 · 8 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.017&nbsp;€</span>
+        <span class="per">73 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>2</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>48 m²</dd></div><div><dt>Baujahr</dt><dd>–</dd></div><div><dt>Zum Strand</dt><dd>20 m</dd></div><div><dt>Einkauf</dt><dd>1,3 km</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Aktivitätsraum</span><span class="chip">Meerblick</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Sauna</span><span class="chip">Pool</span><span class="chip">E-Ladestecker</span></div>
+    <p class="desc">Schöne Nichtraucher-Ferienwohnung mit 100%-Meeresblick. Die Wohnung wurde 2007 renoviert, und die Möbel datieren generell aus dem Jahr 2013. Neues Bad mit Fußbodenheizung. Kühlschrank mit separater Gefrierabteilung. Schlafzimmer mit großem Doppelbett. 10 m2 großer Balkon mit Holzfußboden.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3380&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.433988,8.363907" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-24_2026-10-31.html#h3380">Sa 24.10.–Sa 31.10. <b>452 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3381" data-type="apartment"
+         data-ns="1"
+         data-price="1017" data-sqm="48"
+         data-coast="20" data-rating="4.6"
+         data-kid="2">
+  <div class="gallery"><img class="hero" src="assets/photos/3381-0.jpg" alt="Ferienwohnung 10222, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/3381-1.jpg" alt="" loading="lazy"><img src="assets/photos/3381-2.jpg" alt="" loading="lazy"><img src="assets/photos/3381-3.jpg" alt="" loading="lazy"><img src="assets/photos/3381-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">10</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3381&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, A 222</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 10222</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.60 · 10 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.017&nbsp;€</span>
+        <span class="per">73 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>2</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>48 m²</dd></div><div><dt>Baujahr</dt><dd>–</dd></div><div><dt>Zum Strand</dt><dd>20 m</dd></div><div><dt>Einkauf</dt><dd>1,3 km</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Aktivitätsraum</span><span class="chip">Meerblick</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Sauna</span><span class="chip">Pool</span><span class="chip">E-Ladestecker</span></div>
+    <p class="desc">2 Erwachsene + 2 Kinder. Appartment A 222 bietet ab 2018 eine schönes neues Küche. Das Badezimmer ist v. 2015. DVD-Spieler. Gratis Internetzugang über W-LAN, bringen Sie aber Ihren eigenen Laptop mit. Ab 2021 Nichtraucherwohnung.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3381&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.433877,8.363965" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h3381">Sa 17.10.–Sa 7.11. <b>1.399 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h3381">Sa 24.10.–Sa 31.10. <b>452 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h3381">Sa 24.10.–Sa 7.11. <b>834 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h9030" data-type="apartment"
+         data-ns="1"
+         data-price="1017" data-sqm="48"
+         data-coast="20" data-rating="4.0"
+         data-kid="2">
+  <div class="gallery"><img class="hero" src="assets/photos/9030-0.jpg" alt="Ferienwohnung 10230, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/9030-1.jpg" alt="" loading="lazy"><img src="assets/photos/9030-2.jpg" alt="" loading="lazy"><img src="assets/photos/9030-3.jpg" alt="" loading="lazy"><img src="assets/photos/9030-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">11</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=9030&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, A 230</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 10230</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.00 · 1 Bewertung</span>
+      </div>
+      <div class="price">
+        <span class="total">1.017&nbsp;€</span>
+        <span class="per">73 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>2</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>48 m²</dd></div><div><dt>Baujahr</dt><dd>–</dd></div><div><dt>Zum Strand</dt><dd>20 m</dd></div><div><dt>Einkauf</dt><dd>1,3 km</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Aktivitätsraum</span><span class="chip">Meerblick</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Sauna</span><span class="chip">Pool</span><span class="chip">E-Ladestecker</span></div>
+    <p class="desc">.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=9030&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=None,None" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h9030">Sa 17.10.–Sa 7.11. <b>1.399 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h9030">Sa 24.10.–Sa 31.10. <b>452 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h9030">Sa 24.10.–Sa 7.11. <b>834 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3386" data-type="apartment"
+         data-ns="1"
+         data-price="1017" data-sqm="48"
+         data-coast="20" data-rating="5.0"
+         data-kid="2">
+  <div class="gallery"><img class="hero" src="assets/photos/3386-0.jpg" alt="Ferienwohnung 10234, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/3386-1.jpg" alt="" loading="lazy"><img src="assets/photos/3386-2.jpg" alt="" loading="lazy"><img src="assets/photos/3386-3.jpg" alt="" loading="lazy"><img src="assets/photos/3386-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">12</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3386&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, A 234</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 10234</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>5.00 · 3 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.017&nbsp;€</span>
+        <span class="per">73 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>2</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>48 m²</dd></div><div><dt>Baujahr</dt><dd>–</dd></div><div><dt>Zum Strand</dt><dd>20 m</dd></div><div><dt>Einkauf</dt><dd>1,3 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Aktivitätsraum</span><span class="chip">Meerblick</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Sauna</span><span class="chip">Pool</span><span class="chip">E-Ladestecker</span></div>
+    <p class="desc">In der Ferienwohnung Nr. 234 wurden 2015 eine neue Küche und neues Bad eingebaut. DVD-Spieler. DAB-Radio, (Digital Audio Broadcasting-Radio). Kostenfreier Internetzugang über Wi-FI; bringen Sie aber bitte den eigenen Laptop mit. Nichtraucherwohnung! Ab 2026 ist anreise Sonntag.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3386&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.433506,8.364297" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h3386">Sa 17.10.–Sa 7.11. <b>1.399 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h3386">Sa 24.10.–Sa 31.10. <b>452 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h3386">Sa 24.10.–Sa 7.11. <b>834 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3995" data-type="apartment"
+         data-ns="1"
+         data-price="1017" data-sqm="48"
+         data-coast="20" data-rating="4.42"
+         data-kid="2">
+  <div class="gallery"><img class="hero" src="assets/photos/3995-0.jpg" alt="Ferienwohnung 10315, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/3995-1.jpg" alt="" loading="lazy"><img src="assets/photos/3995-2.jpg" alt="" loading="lazy"><img src="assets/photos/3995-3.jpg" alt="" loading="lazy"><img src="assets/photos/3995-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">13</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3995&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, A 315</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 10315</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.42 · 12 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.017&nbsp;€</span>
+        <span class="per">73 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>2</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>48 m²</dd></div><div><dt>Baujahr</dt><dd>–</dd></div><div><dt>Zum Strand</dt><dd>20 m</dd></div><div><dt>Einkauf</dt><dd>1,3 km</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Aktivitätsraum</span><span class="chip">Meerblick</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Sauna</span><span class="chip">Pool</span><span class="chip">E-Ladestecker</span></div>
+    <p class="desc">Die Ferienwohnungen im &quot;Feriecenter Vesterhavet&quot; sind nur 30 m vom Strand entfernt und verfügen alle über Balkon mit Meeresblick. Sie sind eingerichtet mit Schlafraum, Bad sowie Wohnraum mit Küche und Aufbettungsmöglichkeit für 2-4 Personen. Ferner gibt es z.B.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3995&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.43403,8.363803" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h3995">Sa 17.10.–Sa 7.11. <b>1.399 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h3995">Sa 24.10.–Sa 31.10. <b>452 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h3995">Sa 24.10.–Sa 7.11. <b>834 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3391" data-type="apartment"
+         data-ns="1"
+         data-price="1017" data-sqm="48"
+         data-coast="20" data-rating="4.75"
+         data-kid="2">
+  <div class="gallery"><img class="hero" src="assets/photos/3391-0.jpg" alt="Ferienwohnung 10321, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/3391-1.jpg" alt="" loading="lazy"><img src="assets/photos/3391-2.jpg" alt="" loading="lazy"><img src="assets/photos/3391-3.jpg" alt="" loading="lazy"><img src="assets/photos/3391-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">14</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3391&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, A 321</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 10321</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.75 · 8 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.017&nbsp;€</span>
+        <span class="per">73 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>2</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>48 m²</dd></div><div><dt>Baujahr</dt><dd>–</dd></div><div><dt>Zum Strand</dt><dd>20 m</dd></div><div><dt>Einkauf</dt><dd>1,3 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Aktivitätsraum</span><span class="chip">Meerblick</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Sauna</span><span class="chip">Pool</span><span class="chip">E-Ladestecker</span></div>
+    <p class="desc">GEEIGNET FÜR 2 ERWACHSENE + 2 KINDER. A 321 mit Kabel TV und Gratis Internetzugang über W-LAN, bringen Sie aber Ihren eigenen Laptop mit. Die Ferienwohnungen im &quot;Feriencenter Vesterhavet&quot; liegen nur 30 m vom Strand und haben alle Balkon mit Meeresblick.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3391&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.433865,8.363997" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h3391">Sa 17.10.–Sa 7.11. <b>1.399 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h3391">Sa 24.10.–Sa 31.10. <b>452 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h3391">Sa 24.10.–Sa 7.11. <b>834 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3394" data-type="apartment"
+         data-ns="1"
+         data-price="1017" data-sqm="48"
+         data-coast="20" data-rating="4.63"
+         data-kid="2">
+  <div class="gallery"><img class="hero" src="assets/photos/3394-0.jpg" alt="Ferienwohnung 10332, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/3394-1.jpg" alt="" loading="lazy"><img src="assets/photos/3394-2.jpg" alt="" loading="lazy"><img src="assets/photos/3394-3.jpg" alt="" loading="lazy"><img src="assets/photos/3394-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">15</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3394&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, A 332</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 10332</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.63 · 10 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.017&nbsp;€</span>
+        <span class="per">73 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>2</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>48 m²</dd></div><div><dt>Baujahr</dt><dd>–</dd></div><div><dt>Zum Strand</dt><dd>20 m</dd></div><div><dt>Einkauf</dt><dd>1,3 km</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Aktivitätsraum</span><span class="chip">Meerblick</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Sauna</span><span class="chip">Pool</span><span class="chip">E-Ladestecker</span></div>
+    <p class="desc">Diese schöne Wohnung A332 bietet ab 2007 neue Küche mit Mikrowellenherd und Badezimmer und ist durchaus renoviert worden. Gratis Internetzugang über W-LAN, bringen Sie aber Ihren eigenen Laptop mit. Die Ferienwohnungen im &quot;Feriencenter Vesterhavet&quot; liegen nur 30 m vom Strand und haben alle Balkon mit Meeresblick.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3394&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.433573,8.364233" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h3394">Sa 17.10.–Sa 7.11. <b>1.399 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h3394">Sa 24.10.–Sa 31.10. <b>452 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h3394">Sa 24.10.–Sa 7.11. <b>834 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h5860" data-type="apartment"
+         data-ns="1"
+         data-price="1017" data-sqm="48"
+         data-coast="20" data-rating="4.58"
+         data-kid="2">
+  <div class="gallery"><img class="hero" src="assets/photos/5860-0.jpg" alt="Ferienwohnung 11104, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/5860-1.jpg" alt="" loading="lazy"><img src="assets/photos/5860-2.jpg" alt="" loading="lazy"><img src="assets/photos/5860-3.jpg" alt="" loading="lazy"><img src="assets/photos/5860-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">16</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=5860&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, C 104</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 11104</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.58 · 4 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.017&nbsp;€</span>
+        <span class="per">73 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>2</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>48 m²</dd></div><div><dt>Baujahr</dt><dd>–</dd></div><div><dt>Zum Strand</dt><dd>20 m</dd></div><div><dt>Einkauf</dt><dd>1,3 km</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Aktivitätsraum</span><span class="chip">Meerblick</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Sauna</span><span class="chip">Pool</span><span class="chip">E-Ladestecker</span></div>
+    <p class="desc">Diese Wohnung C 205 bietet: Küche und gefliestes Badezimmer mit Fussbodenheizung. Eine empfehlenswerte Wohnung in der C-Block. Radio m. CD-Spieler. Freier Internetanschluß, bringen Sie aber Ihren eigenen Laptop mit. Die Ferienwohnungen im &quot;Feriencenter Vesterhavet&quot; liegen nur 30 m vom Strand und haben alle Balkon mit Meeresblick.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=5860&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.433705,8.364509" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h5860">Sa 17.10.–Sa 7.11. <b>1.399 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h5860">Sa 24.10.–Sa 31.10. <b>452 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h5860">Sa 24.10.–Sa 7.11. <b>834 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3396" data-type="apartment"
+         data-ns="0"
+         data-price="1017" data-sqm="48"
+         data-coast="20" data-rating="4.5"
+         data-kid="2">
+  <div class="gallery"><img class="hero" src="assets/photos/3396-0.jpg" alt="Ferienwohnung 11106, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/3396-1.jpg" alt="" loading="lazy"><img src="assets/photos/3396-2.jpg" alt="" loading="lazy"><img src="assets/photos/3396-3.jpg" alt="" loading="lazy"><img src="assets/photos/3396-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">17</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3396&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, C 106</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 11106</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.50 · 2 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.017&nbsp;€</span>
+        <span class="per">73 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>2</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>48 m²</dd></div><div><dt>Baujahr</dt><dd>–</dd></div><div><dt>Zum Strand</dt><dd>20 m</dd></div><div><dt>Einkauf</dt><dd>1,3 km</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns-unknown">Keine Angabe zum Rauchen</span><span class="chip">Aktivitätsraum</span><span class="chip">Meerblick</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Sauna</span><span class="chip">Pool</span><span class="chip">E-Ladestecker</span></div>
+    <p class="desc">Diese Ferienwohnung im Ferienzentrum Vesterhavet liegt nur 20 m vom Strand entfernt und verfügt über einen Balkon mit schrägem Blick auf die Nordsee. Die Wohnung befindet sich im Block C. Die Ferienwohnung verfügt über ein Schlafzimmer (2 Personen), ein Badezimmer und ein Wohnzimmer mit Küche.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3396&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.43367,8.36463" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h3396">Sa 17.10.–Sa 7.11. <b>1.399 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h3396">Sa 24.10.–Sa 31.10. <b>452 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h3396">Sa 24.10.–Sa 7.11. <b>834 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3375" data-type="apartment"
+         data-ns="1"
+         data-price="1017" data-sqm="48"
+         data-coast="20" data-rating="4.71"
+         data-kid="2">
+  <div class="gallery"><img class="hero" src="assets/photos/3375-0.jpg" alt="Ferienwohnung 11205, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/3375-1.jpg" alt="" loading="lazy"><img src="assets/photos/3375-2.jpg" alt="" loading="lazy"><img src="assets/photos/3375-3.jpg" alt="" loading="lazy"><img src="assets/photos/3375-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">18</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3375&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, C 205</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 11205</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.71 · 8 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.017&nbsp;€</span>
+        <span class="per">73 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>2</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>48 m²</dd></div><div><dt>Baujahr</dt><dd>–</dd></div><div><dt>Zum Strand</dt><dd>20 m</dd></div><div><dt>Einkauf</dt><dd>1,3 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Aktivitätsraum</span><span class="chip">Meerblick</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Sauna</span><span class="chip">Pool</span><span class="chip">E-Ladestecker</span></div>
+    <p class="desc">Das &quot;Feriecenter Vesterhavet&quot; bietet ganz verschiedene wunderschöne Ferienwohnungen in fantastischer Lage, nur 20 Meter vom Strand von Fanø Bad entfernt, und macht es euch somit leicht, eine tägliche Dosis &quot;Vesterhav&quot; (Nordsee) zu bekommen und viele schöne Sonnenuntergänge zu erleben!</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3375&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.43364,8.364587" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h3375">Sa 17.10.–Sa 7.11. <b>1.399 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h3375">Sa 24.10.–Sa 31.10. <b>452 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h3375">Sa 24.10.–Sa 7.11. <b>834 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3399" data-type="apartment"
+         data-ns="1"
+         data-price="1017" data-sqm="48"
+         data-coast="20" data-rating="4.67"
+         data-kid="2">
+  <div class="gallery"><img class="hero" src="assets/photos/3399-0.jpg" alt="Ferienwohnung 11207, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/3399-1.jpg" alt="" loading="lazy"><img src="assets/photos/3399-2.jpg" alt="" loading="lazy"><img src="assets/photos/3399-3.jpg" alt="" loading="lazy"><img src="assets/photos/3399-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">19</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3399&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, C 207</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 11207</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.67 · 10 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.017&nbsp;€</span>
+        <span class="per">73 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>2</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>48 m²</dd></div><div><dt>Baujahr</dt><dd>–</dd></div><div><dt>Zum Strand</dt><dd>20 m</dd></div><div><dt>Einkauf</dt><dd>1,3 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Aktivitätsraum</span><span class="chip">Meerblick</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Sauna</span><span class="chip">Pool</span><span class="chip">E-Ladestecker</span></div>
+    <p class="desc">Die Wohnung C 207 bietet: Küche und Bad (mit Fussbodenheizung) v. 2010. Schönes Wohnung im C-Block. Nichtraucherwohnung. Die Ferienwohnungen im &quot;Feriencenter Vesterhavet&quot; liegen nur 30 m vom Strand und haben alle Balkon mit Meeresblick.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3399&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.433705,8.364509" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h3399">Sa 17.10.–Sa 7.11. <b>1.399 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h3399">Sa 24.10.–Sa 31.10. <b>452 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h3399">Sa 24.10.–Sa 7.11. <b>834 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h8518" data-type="apartment"
+         data-ns="1"
+         data-price="1087" data-sqm="48"
+         data-coast="20" data-rating="4.71"
+         data-kid="2">
+  <div class="gallery"><img class="hero" src="assets/photos/8518-0.jpg" alt="Ferienwohnung 11113, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/8518-1.jpg" alt="" loading="lazy"><img src="assets/photos/8518-2.jpg" alt="" loading="lazy"><img src="assets/photos/8518-3.jpg" alt="" loading="lazy"><img src="assets/photos/8518-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">20</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=8518&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, C 113</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 11113</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.71 · 8 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.087&nbsp;€</span>
+        <span class="per">78 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>2</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>48 m²</dd></div><div><dt>Baujahr</dt><dd>–</dd></div><div><dt>Zum Strand</dt><dd>20 m</dd></div><div><dt>Einkauf</dt><dd>1,3 km</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Aktivitätsraum</span><span class="chip">Meerblick</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Sauna</span><span class="chip">Pool</span><span class="chip">E-Ladestecker</span></div>
+    <p class="desc">Eine sehr schöne renovierte Wohnung im Feriencenter Vesterhavet mit Sonne vom Süd und Blick zum Meer von der Balkon aus. Ein wohlerzogener Hund Max. 45 cm ist erlaubt. Alle Einrichtungen im Ferienzentrum stehen Ihnen kostenlos zur Verfügung. 1 Schlafzimmer mit 1 großen 180 x 200 cm großen Box-Doppelbett.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=8518&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.433829,8.365016" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h8518">Sa 17.10.–Sa 7.11. <b>1.469 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h8518">Sa 24.10.–Sa 31.10. <b>522 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h8518">Sa 24.10.–Sa 7.11. <b>904 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3130" data-type="house"
+         data-ns="1"
+         data-price="1099" data-sqm="90"
+         data-coast="2000" data-rating="4.71"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3130-0.jpg" alt="Ferienhaus 00859, Nordby" loading="lazy"><div class="strip"><img src="assets/photos/3130-1.jpg" alt="" loading="lazy"><img src="assets/photos/3130-2.jpg" alt="" loading="lazy"><img src="assets/photos/3130-3.jpg" alt="" loading="lazy"><img src="assets/photos/3130-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">21</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3130&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Martin Chr.vej 3</a></h3>
+        <p class="addr">Nordby, Fanø <span class="kat">· Kat.-Nr. 00859</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.71 · 16 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.099&nbsp;€</span>
+        <span class="per">78 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>5</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>90 m²</dd></div><div><dt>Baujahr</dt><dd>1809</dd></div><div><dt>Zum Strand</dt><dd>2,0 km</dd></div><div><dt>Einkauf</dt><dd>200 m</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Kabel-TV. DVD-Spieler und Radio. Brennofen. Wir verfügen hier über ein in 1991 renoviertes Fanøhäuschen in Nordby, wo man das Stadtleben richtig miterleben kann. Ein hübsches Haus, geschmackvoll eingerichtet und voller Atmosphäre! Gute Betten mit Sprungfedermatratzen. Das Haus bildet den perfekten Rahmen für einen besonderen Fanø-Urlaub.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3130&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.444072,8.403994" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h3130">Sa 17.10.–Sa 7.11. <b>1.507 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h3130">Sa 24.10.–Sa 31.10. <b>510 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h3130">Sa 24.10.–Sa 7.11. <b>918 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3358" data-type="apartment"
+         data-ns="1"
+         data-price="1105" data-sqm="84"
+         data-coast="300" data-rating="4.62"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3358-0.jpg" alt="Ferienwohnung 01317, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/3358-1.jpg" alt="" loading="lazy"><img src="assets/photos/3358-2.jpg" alt="" loading="lazy"><img src="assets/photos/3358-3.jpg" alt="" loading="lazy"><img src="assets/photos/3358-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">22</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3358&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Golfstien 1 E, lejl. 17</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 01317</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.62 · 8 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.105&nbsp;€</span>
+        <span class="per">79 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>5</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>84 m²</dd></div><div><dt>Baujahr</dt><dd>1992</dd></div><div><dt>Zum Strand</dt><dd>300 m</dd></div><div><dt>Einkauf</dt><dd>1,2 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Wir präsentieren hier eine 2021 renovierte Ferienwohnung im Golfparken in perfekter Lage im Zentrum von Fanø Bad, direkt neben Dänemarks wunderschönem Links-Golfplatz, Tennisplätzen und Minigolf. Die geschlossene Terrasse liegt perfekt Richtung Süden und Westen. Die Wohnung ist mit 84 m2 und 3 Schlafzimmern groß und geräumig.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3358&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.435113,8.368278" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-24_2026-10-31.html#h3358">Sa 24.10.–Sa 31.10. <b>516 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3013" data-type="house"
+         data-ns="0"
+         data-price="1119" data-sqm="64"
+         data-coast="650" data-rating="4.62"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3013-0.jpg" alt="Ferienhaus 00690 - &quot;Sun Club&quot;, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/3013-1.jpg" alt="" loading="lazy"><img src="assets/photos/3013-2.jpg" alt="" loading="lazy"><img src="assets/photos/3013-3.jpg" alt="" loading="lazy"><img src="assets/photos/3013-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">23</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3013&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Vester Engvej 8</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00690 - &quot;Sun Club&quot;</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.62 · 7 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.119&nbsp;€</span>
+        <span class="per">80 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>64 m²</dd></div><div><dt>Baujahr</dt><dd>1985</dd></div><div><dt>Zum Strand</dt><dd>650 m</dd></div><div><dt>Einkauf</dt><dd>2,0 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns-unknown">Keine Angabe zum Rauchen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Kabel TV. Apple TV. Wärmepumpe. Wirklich gemütliches Haus mit teilweise geschlossener Terrasse. Ansprechende Einrichtung, daher sehr nachgefragt. Geschirrspüler. Grill. Internetzugang über W-LAN, bringen Sie aber Ihren eigenen Laptop mit. Haustier strengstens untersagt!!!</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3013&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.412384,8.396323" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h3013">Sa 17.10.–Sa 7.11. <b>1.548 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h3013">Sa 24.10.–Sa 31.10. <b>506 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h3013">Sa 24.10.–Sa 7.11. <b>935 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h9131" data-type="apartment"
+         data-ns="1"
+         data-price="1124" data-sqm="70"
+         data-coast="300" data-rating="0.0"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/9131-0.jpg" alt="Ferienwohnung 01310, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/9131-1.jpg" alt="" loading="lazy"><img src="assets/photos/9131-2.jpg" alt="" loading="lazy"><img src="assets/photos/9131-3.jpg" alt="" loading="lazy"><img src="assets/photos/9131-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">24</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=9131&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Golfstien 7E, lejl. 10</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 01310</span></p>
+        <span class="rating"><span class="none">noch keine Bewertung</span></span>
+      </div>
+      <div class="price">
+        <span class="total">1.124&nbsp;€</span>
+        <span class="per">80 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>2</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>70 m²</dd></div><div><dt>Baujahr</dt><dd>1992</dd></div><div><dt>Zum Strand</dt><dd>300 m</dd></div><div><dt>Einkauf</dt><dd>1,2 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span></div>
+    <p class="desc">Wir sind stolz darauf, Ihnen die wohl schönste und exklusivste Ferienwohnung im „Golfparken“ in Fanø Bad präsentieren zu dürfen. Die Lage ist schön und besticht durch eine geschlossene, nach Westen ausgerichtete Terrasse, die mit Nachmittags- und Abendsonne verwöhnt.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=9131&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=None,None" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h9131">Sa 17.10.–Sa 7.11. <b>1.492 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h9131">Sa 24.10.–Sa 31.10. <b>520 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h9131">Sa 24.10.–Sa 7.11. <b>888 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3016" data-type="house"
+         data-ns="1"
+         data-price="1125" data-sqm="64"
+         data-coast="1200" data-rating="4.73"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3016-0.jpg" alt="Ferienhaus 00694, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/3016-1.jpg" alt="" loading="lazy"><img src="assets/photos/3016-2.jpg" alt="" loading="lazy"><img src="assets/photos/3016-3.jpg" alt="" loading="lazy"><img src="assets/photos/3016-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">25</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3016&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Vestertoft 44</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00694</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.73 · 5 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.125&nbsp;€</span>
+        <span class="per">80 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>64 m²</dd></div><div><dt>Baujahr</dt><dd>1984</dd></div><div><dt>Zum Strand</dt><dd>1,2 km</dd></div><div><dt>Einkauf</dt><dd>1,5 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Internet</span></div>
+    <p class="desc">Es ist eine Freude, Ihnen dieses schöne und gepflegte Ferienhaus zu präsentieren. Die Lage ist schön auf einem großen, ruhigen Grundstück mit Bepflanzung, einer Feuerstelle und eine große ungenierte Terrasse. Vieles wurde im Laufe der Jahre renoviert, modernisiert und erneuert.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3016&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.431616,8.387212" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-24_2026-10-31.html#h3016">Sa 24.10.–Sa 31.10. <b>534 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h6851" data-type="house"
+         data-ns="1"
+         data-price="1141" data-sqm="58"
+         data-coast="1200" data-rating="4.53"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/6851-0.jpg" alt="Ferienhaus 00673, Sønderho" loading="lazy"><div class="strip"><img src="assets/photos/6851-1.jpg" alt="" loading="lazy"><img src="assets/photos/6851-2.jpg" alt="" loading="lazy"><img src="assets/photos/6851-3.jpg" alt="" loading="lazy"><img src="assets/photos/6851-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">26</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=6851&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Vester Land 35</a></h3>
+        <p class="addr">Sønderho, Fanø <span class="kat">· Kat.-Nr. 00673</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.53 · 5 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.141&nbsp;€</span>
+        <span class="per">82 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>58 m²</dd></div><div><dt>Baujahr</dt><dd>–</dd></div><div><dt>Zum Strand</dt><dd>1,2 km</dd></div><div><dt>Einkauf</dt><dd>700 m</dd></div><div><dt>Haustiere</dt><dd>2</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Geschirrspüler</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Absolut charmantes kleines Sommerhaus (58qm) mit tollem Grundstück – gelegen im schönen Sønderho. Praktische Küche mit Geschirrspüler in offener Verbindung zum Essplatz und zum Wohnbereich. Badezimmer mit Fußbodenheizung. Zwei Schlafzimmer, eines mit Doppelbett und eines mit Etagenbett für die Kleinen.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=6851&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.350726,8.463796" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-24_2026-10-31.html#h6851">Sa 24.10.–Sa 31.10. <b>528 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3357" data-type="apartment"
+         data-ns="1"
+         data-price="1160" data-sqm="75"
+         data-coast="300" data-rating="4.33"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3357-0.jpg" alt="Ferienwohnung 01316, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/3357-1.jpg" alt="" loading="lazy"><img src="assets/photos/3357-2.jpg" alt="" loading="lazy"><img src="assets/photos/3357-3.jpg" alt="" loading="lazy"><img src="assets/photos/3357-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">27</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3357&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Golfstien 1 D, Lejl. 16</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 01316</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.33 · 4 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.160&nbsp;€</span>
+        <span class="per">83 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>5</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>75 m²</dd></div><div><dt>Baujahr</dt><dd>1992</dd></div><div><dt>Zum Strand</dt><dd>300 m</dd></div><div><dt>Einkauf</dt><dd>1,2 km</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span></div>
+    <p class="desc">Schön renovierte Ferienwohnung in Golfparken mit geschlossene Terrasse ist perfekt nach Süden und Westen ausgerichtet. Die Wohnung ist mit ihren 74 m2 und 3 Schlafzimmern groß und geräumig für 5 Personen. 1 Schlafzimmer ist unten und 2 Schlafzimmer ist im 1. Stock.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3357&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.435174,8.368224" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h3357">Sa 17.10.–Sa 7.11. <b>1.639 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h3357">Sa 24.10.–Sa 31.10. <b>546 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h3357">Sa 24.10.–Sa 7.11. <b>1.025 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h2941" data-type="house"
+         data-ns="1"
+         data-price="1164" data-sqm="65"
+         data-coast="800" data-rating="4.64"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/2941-0.jpg" alt="Ferienhaus 00597, Sønderho" loading="lazy"><div class="strip"><img src="assets/photos/2941-1.jpg" alt="" loading="lazy"><img src="assets/photos/2941-2.jpg" alt="" loading="lazy"><img src="assets/photos/2941-3.jpg" alt="" loading="lazy"><img src="assets/photos/2941-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">28</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=2941&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Lodne Bjerge 6a</a></h3>
+        <p class="addr">Sønderho, Fanø <span class="kat">· Kat.-Nr. 00597</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.64 · 12 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.164&nbsp;€</span>
+        <span class="per">83 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>65 m²</dd></div><div><dt>Baujahr</dt><dd>1986</dd></div><div><dt>Zum Strand</dt><dd>800 m</dd></div><div><dt>Einkauf</dt><dd>700 m</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Kabel TV. Brennofen (neu 2023). DVD- und Radio m. CD-Spieler. Gratis Internetzugang über W-LAN, bringen Sie aber Ihren eigenen Laptop mit. Äußerst gut erhaltenes und ausgestattetes Haus in schöner, ungestörter Lage am Naturschutzgebiet in den Dünen.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=2941&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.346706,8.459666" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-24_2026-10-31.html#h2941">Sa 24.10.–Sa 31.10. <b>530 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3101" data-type="house"
+         data-ns="1"
+         data-price="1185" data-sqm="83"
+         data-coast="1100" data-rating="4.57"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3101-0.jpg" alt="Ferienhaus 00814, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/3101-1.jpg" alt="" loading="lazy"><img src="assets/photos/3101-2.jpg" alt="" loading="lazy"><img src="assets/photos/3101-3.jpg" alt="" loading="lazy"><img src="assets/photos/3101-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">29</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3101&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Hedemarken 13</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00814</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.57 · 7 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.185&nbsp;€</span>
+        <span class="per">85 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>83 m²</dd></div><div><dt>Baujahr</dt><dd>1978</dd></div><div><dt>Zum Strand</dt><dd>1,1 km</dd></div><div><dt>Einkauf</dt><dd>2,4 km</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Kabel-TV. Chromecast. DVD-Spieler. DAB-Radio. Wärmepumpe. Schönes Ferienhaus in ruhiger Lage direkt am Naturgebiet bei Hedemarken. Das Haus ist sehr gepflegt und geschmackvoll eingerichtet und hat eine moderne Küche mit Geschirrspüler und Mikrowellenherd. Einen geräumigen Wohnraum mit praktischem Alkoven-Schlafteil.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3101&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.414434,8.401782" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-24_2026-10-31.html#h3101">Sa 24.10.–Sa 31.10. <b>553 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h2977" data-type="house"
+         data-ns="0"
+         data-price="1203" data-sqm="100"
+         data-coast="1100" data-rating="4.33"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/2977-0.jpg" alt="Ferienhaus 00644, Sønderho" loading="lazy"><div class="strip"><img src="assets/photos/2977-1.jpg" alt="" loading="lazy"><img src="assets/photos/2977-2.jpg" alt="" loading="lazy"><img src="assets/photos/2977-3.jpg" alt="" loading="lazy"><img src="assets/photos/2977-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">30</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=2977&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Nymarken 7</a></h3>
+        <p class="addr">Sønderho, Fanø <span class="kat">· Kat.-Nr. 00644</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.33 · 6 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.203&nbsp;€</span>
+        <span class="per">86 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>4</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>100 m²</dd></div><div><dt>Baujahr</dt><dd>1979</dd></div><div><dt>Zum Strand</dt><dd>1,1 km</dd></div><div><dt>Einkauf</dt><dd>1,0 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns-unknown">Keine Angabe zum Rauchen</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Kabel-TV, (4 Deutsche Programme) DVD-Spieler, Radio m. CD-Spieler. Brennofen. Kostenfreier Internetzugang über WI-FI; bringen Sie aber bitte den eigenen Laptop mit. Ruhig gelegen am Ende von Nymarken in Sønderho steht dieses gemütliche Ferienhaus, das 2015 modernisiert wurde.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=2977&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.355727,8.460052" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h2977">Sa 17.10.–Sa 7.11. <b>1.653 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h2977">Sa 24.10.–Sa 31.10. <b>560 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h2977">Sa 24.10.–Sa 7.11. <b>1.010 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h8978" data-type="house"
+         data-ns="1"
+         data-price="1306" data-sqm="56"
+         data-coast="1550" data-rating="4.17"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/8978-0.jpg" alt="Ferienhaus 00876, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/8978-1.jpg" alt="" loading="lazy"><img src="assets/photos/8978-2.jpg" alt="" loading="lazy"><img src="assets/photos/8978-3.jpg" alt="" loading="lazy"><img src="assets/photos/8978-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">31</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=8978&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Søstjernen 19</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00876</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.17 · 2 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.306&nbsp;€</span>
+        <span class="per">93 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>2</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>56 m²</dd></div><div><dt>Baujahr</dt><dd>1985</dd></div><div><dt>Zum Strand</dt><dd>1,6 km</dd></div><div><dt>Einkauf</dt><dd>850 m</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Geschirrspüler</span><span class="chip">Internet</span></div>
+    <p class="desc">Das Haus wurde für die Saison 2026 unter anderem mit einer neuen Küche, einem Duschbad, Möbeln und Betten aktualisiert. Darüber hinaus wurde das Haus innen gestrichen . Hier ist das ideale Ferienhaus für entweder Paare oder die kleine Familie, die friedliche Umgebung auf einem Dünengrundstück im beliebten Rindby wünscht.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=8978&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.429743,8.383148" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h8978">Sa 17.10.–Sa 7.11. <b>1.776 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h8978">Sa 24.10.–Sa 31.10. <b>622 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h8978">Sa 24.10.–Sa 7.11. <b>1.092 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h8189" data-type="house"
+         data-ns="1"
+         data-price="1313" data-sqm="64"
+         data-coast="550" data-rating="4.6"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/8189-0.jpg" alt="Ferienhaus 00888, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/8189-1.jpg" alt="" loading="lazy"><img src="assets/photos/8189-2.jpg" alt="" loading="lazy"><img src="assets/photos/8189-3.jpg" alt="" loading="lazy"><img src="assets/photos/8189-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">32</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=8189&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Lyngbakken 22</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00888</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.60 · 14 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.313&nbsp;€</span>
+        <span class="per">94 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>2</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>64 m²</dd></div><div><dt>Baujahr</dt><dd>1969</dd></div><div><dt>Zum Strand</dt><dd>550 m</dd></div><div><dt>Einkauf</dt><dd>400 m</dd></div><div><dt>Haustiere</dt><dd>2</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Das Haus verfügt über: Helle Küche mit Dachfenster, Geschirrspüler, Mikrowelle und Gasherd. Im Schuppen befindet sich ein extra großer Gefrierschrank. Die Küche ist zum gemütlichen Wohn- und Essbereich mit Dachfenster offen. Badezimmer. Zwei Schlafzimmer mit Doppelbetten ab 2025 (160 x 200 cm &amp; 140 x 200 cm). Das Nebengebäude ist privat.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=8189&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.426992,8.38418" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h8189">Sa 17.10.–Sa 7.11. <b>1.776 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h8189">Sa 24.10.–Sa 31.10. <b>619 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h8189">Sa 24.10.–Sa 7.11. <b>1.082 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3121" data-type="house"
+         data-ns="1"
+         data-price="1358" data-sqm="70"
+         data-coast="500" data-rating="4.57"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3121-0.jpg" alt="Ferienhaus 00841, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/3121-1.jpg" alt="" loading="lazy"><img src="assets/photos/3121-2.jpg" alt="" loading="lazy"><img src="assets/photos/3121-3.jpg" alt="" loading="lazy"><img src="assets/photos/3121-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">33</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3121&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Vagtbjergvej 8</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00841</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.57 · 7 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.358&nbsp;€</span>
+        <span class="per">97 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>2</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>70 m²</dd></div><div><dt>Baujahr</dt><dd>1979</dd></div><div><dt>Zum Strand</dt><dd>500 m</dd></div><div><dt>Einkauf</dt><dd>100 m</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span><span class="chip">E-Ladestecker</span></div>
+    <p class="desc">Schönes Ferienhaus in zentraler Lage in Rindby und nicht weit von Einkaufsmöglichkeiten und dem Strand entfernt. Auf der Rückseite liegt das Haus fast in der Düne, weshalb Sie sich auf der Terrasse richtung West eins mit der Natur fühlen.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3121&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.422451,8.385381" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-24_2026-10-31.html#h3121">Sa 24.10.–Sa 31.10. <b>648 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3215" data-type="house"
+         data-ns="0"
+         data-price="1394" data-sqm="77"
+         data-coast="200" data-rating="4.33"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3215-0.jpg" alt="Ferienhaus 00972, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/3215-1.jpg" alt="" loading="lazy"><img src="assets/photos/3215-2.jpg" alt="" loading="lazy"><img src="assets/photos/3215-3.jpg" alt="" loading="lazy"><img src="assets/photos/3215-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">34</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3215&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Hasidvej 21</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00972</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.33 · 6 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.394&nbsp;€</span>
+        <span class="per">100 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>77 m²</dd></div><div><dt>Baujahr</dt><dd>1977</dd></div><div><dt>Zum Strand</dt><dd>200 m</dd></div><div><dt>Einkauf</dt><dd>500 m</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns-unknown">Keine Angabe zum Rauchen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Kabel TV. DVD- und Radio m. CD-Spieler. Dieses Ferienhaus ist auf einem zentralen Dünengrundstück gelegen nur 100 m vom Strand. Es ist geräumig und eingerichtet mit drei Schlafzimmern mit Boxbetten: 4 Einzelbetten und 1 Doppelbett. Ein Haustier ist erlaubt. Separater Raum mit Waschmaschine und Trockner.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3215&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.424549,8.375183" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-24_2026-10-31.html#h3215">Sa 24.10.–Sa 31.10. <b>643 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3081" data-type="house"
+         data-ns="1"
+         data-price="1414" data-sqm="70"
+         data-coast="800" data-rating="4.81"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3081-0.jpg" alt="Ferienhaus 00788, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/3081-1.jpg" alt="" loading="lazy"><img src="assets/photos/3081-2.jpg" alt="" loading="lazy"><img src="assets/photos/3081-3.jpg" alt="" loading="lazy"><img src="assets/photos/3081-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">35</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3081&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Blommens Toft 6</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00788</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.81 · 12 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.414&nbsp;€</span>
+        <span class="per">101 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>4</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>70 m²</dd></div><div><dt>Baujahr</dt><dd>1989</dd></div><div><dt>Zum Strand</dt><dd>800 m</dd></div><div><dt>Einkauf</dt><dd>1,8 km</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">ACHTUNG: 1 RUHIGER HUND BIS MAX. 45 CM IST ERLAUBT. Kabel TV. DVD-Spieler. Brennofen. Dieses Haus wurde 1989 gebaut und ist sehr gemütlich, gut ausgestattet und absolut niedlich. Das Haus ist für 4 Personen. Moderne Küche mit Geschirrspüler und Mikrowellenherd. 90 L-Gefrieranlage im Schuppen. Waschmaschine. Trockner.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3081&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.417512,8.394176999999999" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h3081">Sa 17.10.–Sa 7.11. <b>1.858 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h3081">Sa 24.10.–Sa 31.10. <b>709 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h3081">Sa 24.10.–Sa 7.11. <b>1.153 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3011" data-type="house"
+         data-ns="1"
+         data-price="1423" data-sqm="120"
+         data-coast="1100" data-rating="4.83"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3011-0.jpg" alt="Ferienhaus 00687, Sønderho" loading="lazy"><div class="strip"><img src="assets/photos/3011-1.jpg" alt="" loading="lazy"><img src="assets/photos/3011-2.jpg" alt="" loading="lazy"><img src="assets/photos/3011-3.jpg" alt="" loading="lazy"><img src="assets/photos/3011-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">36</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3011&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Præstemarken 10</a></h3>
+        <p class="addr">Sønderho, Fanø <span class="kat">· Kat.-Nr. 00687</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.83 · 2 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.423&nbsp;€</span>
+        <span class="per">102 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>120 m²</dd></div><div><dt>Baujahr</dt><dd>2005</dd></div><div><dt>Zum Strand</dt><dd>1,1 km</dd></div><div><dt>Einkauf</dt><dd>1,4 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Whirlpool</span><span class="chip">Wärmepumpe</span><span class="chip">E-Ladestecker</span></div>
+    <p class="desc">Behindertengerechtes Ferienhaus! Kabel TV. DVD-Spieler. Radio. Brennofen. Kostenfreier Internetanschluss über Wi-Fi; bringen Sie aber bitte den eigenen Laptop mit. Im schönen Sønderho finden Sie dieses Haus mit moderner Küche mit Geschirrspüler und Mikrowellenherd.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3011&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.353629,8.44869" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h3011">Sa 17.10.–Sa 7.11. <b>1.923 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h3011">Sa 24.10.–Sa 31.10. <b>642 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h3011">Sa 24.10.–Sa 7.11. <b>1.142 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3096" data-type="house"
+         data-ns="1"
+         data-price="1434" data-sqm="121"
+         data-coast="150" data-rating="4.22"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3096-0.jpg" alt="Ferienhaus 00806, Sønderho" loading="lazy"><div class="strip"><img src="assets/photos/3096-1.jpg" alt="" loading="lazy"><img src="assets/photos/3096-2.jpg" alt="" loading="lazy"><img src="assets/photos/3096-3.jpg" alt="" loading="lazy"><img src="assets/photos/3096-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">37</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3096&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Lodne Bjerge 39</a></h3>
+        <p class="addr">Sønderho, Fanø <span class="kat">· Kat.-Nr. 00806</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.22 · 17 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.434&nbsp;€</span>
+        <span class="per">102 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>121 m²</dd></div><div><dt>Baujahr</dt><dd>1970</dd></div><div><dt>Zum Strand</dt><dd>150 m</dd></div><div><dt>Einkauf</dt><dd>1,5 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Internet</span><span class="chip">Sauna</span><span class="chip">Whirlpool</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Satl. TV. DVD-Spieler. Brennofen. Gratis Internetzugang über W-LAN, bringen Sie aber Ihren eigenen Laptop mit. In ungestörter Lage liegt dieses Ferienhaus auf einem 2.100 m2 großem Grundstück in Strandnähe im südlichen Sønderho und ist deshalb ideal für lange Spaziergänge.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3096&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.34305,8.459496" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h3096">Sa 17.10.–Sa 7.11. <b>1.920 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h3096">Sa 24.10.–Sa 31.10. <b>634 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h3096">Sa 24.10.–Sa 7.11. <b>1.120 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h2779" data-type="house"
+         data-ns="1"
+         data-price="1442" data-sqm="79"
+         data-coast="1300" data-rating="4.62"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/2779-0.jpg" alt="Ferienhaus 00181 - &quot;Magurit&quot;, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/2779-1.jpg" alt="" loading="lazy"><img src="assets/photos/2779-2.jpg" alt="" loading="lazy"><img src="assets/photos/2779-3.jpg" alt="" loading="lazy"><img src="assets/photos/2779-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">38</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=2779&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Bjerges Toft 20</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00181 - &quot;Magurit&quot;</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.62 · 7 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.442&nbsp;€</span>
+        <span class="per">103 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>5</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>79 m²</dd></div><div><dt>Baujahr</dt><dd>1996</dd></div><div><dt>Zum Strand</dt><dd>1,3 km</dd></div><div><dt>Einkauf</dt><dd>1,2 km</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Internet</span><span class="chip">Sauna</span><span class="chip">Extra Toilette</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Schönes und gepflegtes Ferienhaus, das einen hellen und modernen Eindruck macht. Außen sind gute Terrassenverhältnisse, und innen wird das Haus laufen in Stand gehalten. Ab 2019 neue Küche mit Fußbodenheizung und neuen Elektrogeräten + schöne große überdachte Terrasse mit Dachfenster. Badezimmer mit Fußbodenheizung und Sauna.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=2779&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.434091,8.385505" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h2779">Sa 17.10.–Sa 7.11. <b>1.891 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h2779">Sa 24.10.–Sa 31.10. <b>745 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h2779">Sa 24.10.–Sa 7.11. <b>1.194 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h2814" data-type="house"
+         data-ns="1"
+         data-price="1459" data-sqm="126"
+         data-coast="1300" data-rating="4.5"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/2814-0.jpg" alt="Ferienhaus 00252 - &quot;Lyngbakkehuset&quot;, Sønderho" loading="lazy"><div class="strip"><img src="assets/photos/2814-1.jpg" alt="" loading="lazy"><img src="assets/photos/2814-2.jpg" alt="" loading="lazy"><img src="assets/photos/2814-3.jpg" alt="" loading="lazy"><img src="assets/photos/2814-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">39</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=2814&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Vester Storetoft 28</a></h3>
+        <p class="addr">Sønderho, Fanø <span class="kat">· Kat.-Nr. 00252 - &quot;Lyngbakkehuset&quot;</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.50 · 12 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.459&nbsp;€</span>
+        <span class="per">104 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>126 m²</dd></div><div><dt>Baujahr</dt><dd>1974</dd></div><div><dt>Zum Strand</dt><dd>1,3 km</dd></div><div><dt>Einkauf</dt><dd>1,3 km</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">In schöner ruhiger Lage auf einem 2600 qm großem Naturgrundstück mit Blick auf die Heide in der Nähe des alten und idyllischen Dorf Sønderho, präsentieren wir dieses im Jahr 2021 komplett renovierte und geräumige Ferienhaus mit 1. Etage. Das ganze Haus ist innen weiß gestrichen.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=2814&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.352045,8.45737" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h2814">Sa 17.10.–Sa 7.11. <b>2.000 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h2814">Sa 24.10.–Sa 31.10. <b>707 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h2814">Sa 24.10.–Sa 7.11. <b>1.248 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h6799" data-type="house"
+         data-ns="1"
+         data-price="1483" data-sqm="66"
+         data-coast="650" data-rating="4.81"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/6799-0.jpg" alt="Ferienhaus 00691, Fanø Bad" loading="lazy"><div class="strip"><img src="assets/photos/6799-1.jpg" alt="" loading="lazy"><img src="assets/photos/6799-2.jpg" alt="" loading="lazy"><img src="assets/photos/6799-3.jpg" alt="" loading="lazy"><img src="assets/photos/6799-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">40</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=6799&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Nonboevej 49</a></h3>
+        <p class="addr">Fanø Bad, Fanø <span class="kat">· Kat.-Nr. 00691</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.81 · 7 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.483&nbsp;€</span>
+        <span class="per">106 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>66 m²</dd></div><div><dt>Baujahr</dt><dd>1977</dd></div><div><dt>Zum Strand</dt><dd>650 m</dd></div><div><dt>Einkauf</dt><dd>900 m</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Pittoreskes Sommerhaus gelegen in guter Lage auf einem ungestörten hügeligen Grundstück mit vielfältigem Tierleben. Schöner offener Wohnbereich mit Essbereich. Küche ist sowohl mit Spülmaschine als auch mit einer Mikrowelle ausgestattet. Badezimmer mit Dusche und Fußbodenheizung.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=6799&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.432085,8.375952" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h6799">Sa 17.10.–Sa 7.11. <b>1.973 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h6799">Sa 24.10.–Sa 31.10. <b>778 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h6799">Sa 24.10.–Sa 7.11. <b>1.268 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3075" data-type="house"
+         data-ns="1"
+         data-price="1529" data-sqm="87"
+         data-coast="1200" data-rating="4.5"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3075-0.jpg" alt="Ferienhaus 00782, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/3075-1.jpg" alt="" loading="lazy"><img src="assets/photos/3075-2.jpg" alt="" loading="lazy"><img src="assets/photos/3075-3.jpg" alt="" loading="lazy"><img src="assets/photos/3075-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">41</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3075&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Torpvej 11</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00782</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.50 · 2 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.529&nbsp;€</span>
+        <span class="per">109 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>5</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>87 m²</dd></div><div><dt>Baujahr</dt><dd>1971</dd></div><div><dt>Zum Strand</dt><dd>1,2 km</dd></div><div><dt>Einkauf</dt><dd>1,5 km</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Willkommen im Torpvej 11, der im Jahr 2025 komplett renoviert ist. Das Grundstück ist ein großes Naturgrundstück, auf dem man das wilde Leben genießen kann. Das Haus wurde um 14 m2 erweitert, sodass das Haus nun 87 m2 für einen wunderschönen Urlaub in der friedlichen und ruhigen Gegend von Torp bietet.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3075&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.433068,8.386063" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-24_2026-10-31.html#h3075">Sa 24.10.–Sa 31.10. <b>704 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3988" data-type="house"
+         data-ns="1"
+         data-price="1558" data-sqm="63"
+         data-coast="500" data-rating="4.76"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3988-0.jpg" alt="Ferienhaus 00568 - &quot;Oasen&quot;, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/3988-1.jpg" alt="" loading="lazy"><img src="assets/photos/3988-2.jpg" alt="" loading="lazy"><img src="assets/photos/3988-3.jpg" alt="" loading="lazy"><img src="assets/photos/3988-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">42</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3988&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Gøgevej 26</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00568 - &quot;Oasen&quot;</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.76 · 7 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.558&nbsp;€</span>
+        <span class="per">111 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>5</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>63 m²</dd></div><div><dt>Baujahr</dt><dd>1970</dd></div><div><dt>Zum Strand</dt><dd>500 m</dd></div><div><dt>Einkauf</dt><dd>1,7 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Mit einer Perle von Lage an einer kleinen geschlossenen Seitenstraße bei Gøgevej finden Sie dieses gemütliche 63 m2 große Sommerhaus auf einem riesigen Grundstück mit 3200 m2 und einem kleinen idyllischen See, dessen Wasserstand je nach Jahreszeit variiert. In den richtigen Jahreszeiten enthält der See auch Seerosen.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3988&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.412177,8.393319" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h3988">Sa 17.10.–Sa 7.11. <b>2.089 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h3988">Sa 24.10.–Sa 31.10. <b>793 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h3988">Sa 24.10.–Sa 7.11. <b>1.324 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3036" data-type="house"
+         data-ns="1"
+         data-price="1570" data-sqm="93"
+         data-coast="400" data-rating="4.67"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3036-0.jpg" alt="Ferienhaus 00719 - &quot;Spættebo&quot;, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/3036-1.jpg" alt="" loading="lazy"><img src="assets/photos/3036-2.jpg" alt="" loading="lazy"><img src="assets/photos/3036-3.jpg" alt="" loading="lazy"><img src="assets/photos/3036-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">43</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3036&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Bekkasinvej 19</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00719 - &quot;Spættebo&quot;</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.67 · 5 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.570&nbsp;€</span>
+        <span class="per">112 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>93 m²</dd></div><div><dt>Baujahr</dt><dd>1995</dd></div><div><dt>Zum Strand</dt><dd>400 m</dd></div><div><dt>Einkauf</dt><dd>2,2 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Internet</span><span class="chip">Sauna</span><span class="chip">Whirlpool</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Kabel TV. DVD-Spieler. Brennofen. Nur 400 m vom Strand entfernt liegt dieses moderne Ferienhaus mit Whirlpool, Sauna, Geschirrspüler, Waschmaschine. Das Haus ist geräumig, hell und freundlich eingerichtet und hat gute Terrasseverhältnisse. Carport. Gratis Internetzugang über W-LAN, bringen Sie aber Ihren eigenen Laptop mit. Wärmepumpe.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3036&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.407065,8.397076" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-24_2026-10-31.html#h3036">Sa 24.10.–Sa 31.10. <b>691 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h3143" data-type="house"
+         data-ns="1"
+         data-price="1613" data-sqm="95"
+         data-coast="300" data-rating="4.39"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/3143-0.jpg" alt="Ferienhaus 00880, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/3143-1.jpg" alt="" loading="lazy"><img src="assets/photos/3143-2.jpg" alt="" loading="lazy"><img src="assets/photos/3143-3.jpg" alt="" loading="lazy"><img src="assets/photos/3143-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">44</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3143&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Slunden 24</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00880</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.39 · 6 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.613&nbsp;€</span>
+        <span class="per">115 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>95 m²</dd></div><div><dt>Baujahr</dt><dd>1993</dd></div><div><dt>Zum Strand</dt><dd>300 m</dd></div><div><dt>Einkauf</dt><dd>400 m</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Sauna</span><span class="chip">Whirlpool</span><span class="chip">Extra Toilette</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Kabel TV. Radio m. CD-Spieler. Dieses schöne und komplett ausgestattete Haus - Baujahr 1993 - hat ausser einer guten Lage, eine schöne Küche mit Geschirrspüler. Bad mit Sauna, Whirlpool. Extra Toilette. Waschmaschine u. Trockner. Stein- und Holzfussböden. Fußbodenheizung. Mikroherd. Ab 2007 neue Fenster und innen gestrichen.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=3143&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.418728,8.383144" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-24_2026-10-31.html#h3143">Sa 24.10.–Sa 31.10. <b>709 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h2946" data-type="house"
+         data-ns="1"
+         data-price="1634" data-sqm="115"
+         data-coast="75" data-rating="4.5"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/2946-0.jpg" alt="Ferienhaus 00603 - &quot;Klitbo&quot;, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/2946-1.jpg" alt="" loading="lazy"><img src="assets/photos/2946-2.jpg" alt="" loading="lazy"><img src="assets/photos/2946-3.jpg" alt="" loading="lazy"><img src="assets/photos/2946-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">45</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=2946&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Helmvej 38</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00603 - &quot;Klitbo&quot;</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.50 · 8 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.634&nbsp;€</span>
+        <span class="per">117 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>115 m²</dd></div><div><dt>Baujahr</dt><dd>1981</dd></div><div><dt>Zum Strand</dt><dd>75 m</dd></div><div><dt>Einkauf</dt><dd>550 m</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Schönes Ferienhaus in guter Lage. Nur 75 m vom Strand entfernt. Ein Badestie ist ganz in der Nähe. Die Terrassen an der Südseite des Hauses sind von dichten Hagebuttenrosen umgeben, die einen guten Schutz vor Wind und Wetter bieten. Das Erdgeschoss beinhaltet: Gemütliches Wohnzimmer mit Essbereich.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=2946&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.417829,8.380746" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h2946">Sa 17.10.–Sa 7.11. <b>2.192 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h2946">Sa 24.10.–Sa 31.10. <b>724 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h2946">Sa 24.10.–Sa 7.11. <b>1.282 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h6911" data-type="house"
+         data-ns="1"
+         data-price="1649" data-sqm="102"
+         data-coast="800" data-rating="4.63"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/6911-0.jpg" alt="Ferienhaus 00641, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/6911-1.jpg" alt="" loading="lazy"><img src="assets/photos/6911-2.jpg" alt="" loading="lazy"><img src="assets/photos/6911-3.jpg" alt="" loading="lazy"><img src="assets/photos/6911-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">46</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=6911&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Paradisvej 6</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00641</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.63 · 10 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.649&nbsp;€</span>
+        <span class="per">118 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>102 m²</dd></div><div><dt>Baujahr</dt><dd>1977</dd></div><div><dt>Zum Strand</dt><dd>800 m</dd></div><div><dt>Einkauf</dt><dd>1,9 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">3 Schlafzimmer, davon 2 besonders groß und mit besonders guten 180 x 200 cm großen Box-Doppelbetten. Das 3. Zimmer ist kleiner, aber auch funktional und mit gutes 160 x 200 cm Doppelbett. Gemütliches Wohnzimmer mit Aussichtsfenstern, wo man die wunderschöne Natur genießen kann. Holzofen für Gemütlichkeit für die ganze Familie.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=6911&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.411279,8.395494" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h6911">Sa 17.10.–Sa 7.11. <b>2.160 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h6911">Sa 24.10.–Sa 31.10. <b>844 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h6911">Sa 24.10.–Sa 7.11. <b>1.355 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h8400" data-type="house"
+         data-ns="1"
+         data-price="1682" data-sqm="107"
+         data-coast="800" data-rating="4.13"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/8400-0.jpg" alt="Ferienhaus 00981, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/8400-1.jpg" alt="" loading="lazy"><img src="assets/photos/8400-2.jpg" alt="" loading="lazy"><img src="assets/photos/8400-3.jpg" alt="" loading="lazy"><img src="assets/photos/8400-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">47</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=8400&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Lyngbakken 44 A</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00981</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.13 · 5 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.682&nbsp;€</span>
+        <span class="per">120 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>107 m²</dd></div><div><dt>Baujahr</dt><dd>2008</dd></div><div><dt>Zum Strand</dt><dd>800 m</dd></div><div><dt>Einkauf</dt><dd>800 m</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Sauna</span><span class="chip">Whirlpool</span><span class="chip">Extra Toilette</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Wir freuen uns, Ihnen Lyngbakken 44A vorstellen zu dürfen, das ab Sommer 2025 wieder im Danibo-Programm ist. Eine ideale Wahl für Familien, die einen ruhigen Urlaub mit Wellness und Naturverbundenheit genießen möchten.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=8400&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.427443,8.386753" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h8400">Sa 17.10.–Sa 7.11. <b>2.208 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h8400">Sa 24.10.–Sa 31.10. <b>770 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h8400">Sa 24.10.–Sa 7.11. <b>1.296 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h6754" data-type="house"
+         data-ns="1"
+         data-price="1788" data-sqm="118"
+         data-coast="500" data-rating="4.87"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/6754-0.jpg" alt="Ferienhaus 00659, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/6754-1.jpg" alt="" loading="lazy"><img src="assets/photos/6754-2.jpg" alt="" loading="lazy"><img src="assets/photos/6754-3.jpg" alt="" loading="lazy"><img src="assets/photos/6754-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">48</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=6754&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Nybyvej 44</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00659</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>4.87 · 10 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.788&nbsp;€</span>
+        <span class="per">128 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>4</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>118 m²</dd></div><div><dt>Baujahr</dt><dd>1986</dd></div><div><dt>Zum Strand</dt><dd>500 m</dd></div><div><dt>Einkauf</dt><dd>1,0 km</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Extra Toilette</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Auf einem schönen Grundstück in einer ruhigen Umgebung mit vielen Möglichkeiten windgeschützt zu sitzen, liegt dieses tolle und gepflegte Ferienhaus mit einer Wohnfläche von 118qm. Schöne Küche mit Geschirrspüler in offener Verbindung mit dem gemütlichen Wohnzimmer und Essbereich mit tollem Lichteinfall von grossen Dachflächenfenstern.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=6754&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.429479,8.379651" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h6754">Sa 17.10.–Sa 7.11. <b>2.388 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h6754">Sa 24.10.–Sa 31.10. <b>911 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h6754">Sa 24.10.–Sa 7.11. <b>1.511 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h6256" data-type="apartment"
+         data-ns="1"
+         data-price="1792" data-sqm="100"
+         data-coast="1400" data-rating="4.33"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/6256-0.jpg" alt="Ferienwohnung 00723, Sønderho" loading="lazy"><div class="strip"><img src="assets/photos/6256-1.jpg" alt="" loading="lazy"><img src="assets/photos/6256-2.jpg" alt="" loading="lazy"><img src="assets/photos/6256-3.jpg" alt="" loading="lazy"><img src="assets/photos/6256-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">49</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=6256&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Landevejen 55 C</a></h3>
+        <p class="addr">Sønderho, Fanø <span class="kat">· Kat.-Nr. 00723</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.33 · 3 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">1.792&nbsp;€</span>
+        <span class="per">128 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>7</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>100 m²</dd></div><div><dt>Baujahr</dt><dd>2007</dd></div><div><dt>Zum Strand</dt><dd>1,4 km</dd></div><div><dt>Einkauf</dt><dd>300 m</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienwohnung</span><span class="chip ns">Nichtraucher</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Internet</span><span class="chip">Wärmepumpe</span><span class="chip">Luxus</span></div>
+    <p class="desc">Ferienwohnung Nr. 00723 für 7 Personen kann zusammen mit 00724 für 10 Personen gemietet werden. In diesem Fall mieten Sie Nr. 00721 ​​für 17 Personen mit insgesamt 3 Badezimmern. Ferienwohnung Nr. 00723 ist 100 m2 groß. Wunderschön renoviert im Jahr 2024.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=6256&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.352135,8.467165" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h6256">Sa 17.10.–Sa 7.11. <b>2.382 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h6256">Sa 24.10.–Sa 31.10. <b>934 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h6256">Sa 24.10.–Sa 7.11. <b>1.524 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h4596" data-type="house"
+         data-ns="1"
+         data-price="2153" data-sqm="92"
+         data-coast="200" data-rating="4.5"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/4596-0.jpg" alt="Ferienhaus 00736, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/4596-1.jpg" alt="" loading="lazy"><img src="assets/photos/4596-2.jpg" alt="" loading="lazy"><img src="assets/photos/4596-3.jpg" alt="" loading="lazy"><img src="assets/photos/4596-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">50</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=4596&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Slunden 42</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00736</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.50 · 14 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">2.153&nbsp;€</span>
+        <span class="per">154 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>5</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>92 m²</dd></div><div><dt>Baujahr</dt><dd>1982</dd></div><div><dt>Zum Strand</dt><dd>200 m</dd></div><div><dt>Einkauf</dt><dd>500 m</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Extra Toilette</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Achtung: ein ruhiger Hund, max. 45cm ist zugelassen. Schönes modernes Sommerhaus am Slunden gelegen- mit kurzem Fußweg zum Strand. Das Haus ist modern ausgestattet mit einer praktischen Küche, die unter anderem eine Spülmaschine enthält. Einem hellen ansprechenden Aufenthaltsraum mit Essecke. Einem Badezimmer und einer Gästetoilette.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=4596&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.417844,8.383633" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h4596">Sa 17.10.–Sa 7.11. <b>2.795 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h4596">Sa 24.10.–Sa 31.10. <b>889 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h4596">Sa 24.10.–Sa 7.11. <b>1.531 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h8621" data-type="house"
+         data-ns="1"
+         data-price="2365" data-sqm="153"
+         data-coast="500" data-rating="4.0"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/8621-0.jpg" alt="Ferienhaus 00601, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/8621-1.jpg" alt="" loading="lazy"><img src="assets/photos/8621-2.jpg" alt="" loading="lazy"><img src="assets/photos/8621-3.jpg" alt="" loading="lazy"><img src="assets/photos/8621-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">51</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=8621&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Vindgaf 18</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00601</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.00 · 1 Bewertung</span>
+      </div>
+      <div class="price">
+        <span class="total">2.365&nbsp;€</span>
+        <span class="per">169 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>153 m²</dd></div><div><dt>Baujahr</dt><dd>2000</dd></div><div><dt>Zum Strand</dt><dd>500 m</dd></div><div><dt>Einkauf</dt><dd>300 m</dd></div><div><dt>Haustiere</dt><dd>1</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Sauna</span><span class="chip">Whirlpool</span><span class="chip">Extra Toilette</span><span class="chip">Wärmepumpe</span></div>
+    <p class="desc">Danibo begrüßt Sie ab der Saison 2026 im großen, schönen, soliden Ferienhaus Vindgaf 18 – das Anwesen ist vielen bekannt. Das Haus liegt wunderschön am Vindgaf an einer privaten Seitenstraße und nicht weit vom Zentrum von Rindby mit Supermarkt, Lighthouse Burger und Stoppestedet entfernt.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=8621&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.425324,8.381174" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h8621">Sa 17.10.–Sa 7.11. <b>3.147 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h8621">Sa 24.10.–Sa 31.10. <b>1.208 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h8621">Sa 24.10.–Sa 7.11. <b>1.990 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h5859" data-type="house"
+         data-ns="1"
+         data-price="2526" data-sqm="83"
+         data-coast="300" data-rating="4.29"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/5859-0.jpg" alt="Ferienhaus 00592, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/5859-1.jpg" alt="" loading="lazy"><img src="assets/photos/5859-2.jpg" alt="" loading="lazy"><img src="assets/photos/5859-3.jpg" alt="" loading="lazy"><img src="assets/photos/5859-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">52</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=5859&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Kløwen 10</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00592</span></p>
+        <span class="rating"><span class="stars">★★★★☆</span>4.29 · 8 Bewertungen</span>
+      </div>
+      <div class="price">
+        <span class="total">2.526&nbsp;€</span>
+        <span class="per">180 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>83 m²</dd></div><div><dt>Baujahr</dt><dd>2018</dd></div><div><dt>Zum Strand</dt><dd>300 m</dd></div><div><dt>Einkauf</dt><dd>300 m</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Extra Toilette</span><span class="chip">Wärmepumpe</span><span class="chip">Luxus</span></div>
+    <p class="desc">Herrlich schönes und stilvolles, von einem Architekten entworfenes Ferienhaus hoch oben auf Kløwen, Baujahr 2018. Erstmals vermietet im Jahr 2023. Die Düne auf der Westseite des Hauses bietet Schutz und eine ungenierte Einzäunung im Westen und Süden .</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=5859&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.423324,8.378801" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-17_2026-11-07.html#h5859">Sa 17.10.–Sa 7.11. <b>3.431 €</b></a><a href="fanoe-2026-10-24_2026-10-31.html#h5859">Sa 24.10.–Sa 31.10. <b>1.246 €</b></a><a href="fanoe-2026-10-24_2026-11-07.html#h5859">Sa 24.10.–Sa 7.11. <b>2.151 €</b></a></p>
+  </div>
+</article>
+<article class="card" id="h8509" data-type="house"
+         data-ns="1"
+         data-price="3442" data-sqm="169"
+         data-coast="50" data-rating="5.0"
+         data-kid="0">
+  <div class="gallery"><img class="hero" src="assets/photos/8509-0.jpg" alt="Ferienhaus 00201, Rindby" loading="lazy"><div class="strip"><img src="assets/photos/8509-1.jpg" alt="" loading="lazy"><img src="assets/photos/8509-2.jpg" alt="" loading="lazy"><img src="assets/photos/8509-3.jpg" alt="" loading="lazy"><img src="assets/photos/8509-4.jpg" alt="" loading="lazy"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="rank">53</span>
+      <div class="titleblock">
+        <h3><a href="https://www.danibo.dk/de/s/ferienhaus/?id=8509&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Hasidvej 30</a></h3>
+        <p class="addr">Rindby, Fanø <span class="kat">· Kat.-Nr. 00201</span></p>
+        <span class="rating"><span class="stars">★★★★★</span>5.00 · 1 Bewertung</span>
+      </div>
+      <div class="price">
+        <span class="total">3.442&nbsp;€</span>
+        <span class="per">246 € / Nacht · 14 Nächte</span>
+      </div>
+    </div>
+    <dl class="specs"><div><dt>Personen</dt><dd>6</dd></div><div><dt>Schlafz.</dt><dd>3</dd></div><div><dt>Bäder</dt><dd>1</dd></div><div><dt>Wohnfläche</dt><dd>169 m²</dd></div><div><dt>Baujahr</dt><dd>1988</dd></div><div><dt>Zum Strand</dt><dd>50 m</dd></div><div><dt>Einkauf</dt><dd>500 m</dd></div><div><dt>Haustiere</dt><dd>nein</dd></div></dl>
+    <div class="chips"><span class="chip type">Ferienhaus</span><span class="chip ns">Nichtraucher</span><span class="chip">Meerblick</span><span class="chip">Kaminofen</span><span class="chip">Geschirrspüler</span><span class="chip">Waschmaschine</span><span class="chip">Trockner</span><span class="chip">Internet</span><span class="chip">Extra Toilette</span><span class="chip">Wärmepumpe</span><span class="chip">Luxus</span></div>
+    <p class="desc">Toller Meerblick aus der 1. Etage! In der ersten Dünenreihe, nur 50 m vom Strand entfernt, befindet sich dieses ganzjährig isolierte, äußerst gepflegte und sehr gemütliche Qualitätsferienhaus mit Reetdach und 1. Etage. 3 Schlafzimmer und 2 Badezimmer.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.danibo.dk/de/s/ferienhaus/?id=8509&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Auf danibo.dk ansehen</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=55.42336,8.375619" target="_blank" rel="noopener">Lage auf der Karte</a>
+    </div>
+    <p class="altprices">Andere Zeiträume: <a href="fanoe-2026-10-24_2026-10-31.html#h8509">Sa 24.10.–Sa 31.10. <b>1.565 €</b></a></p>
+  </div>
+</article></div></div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <h2>Alles auf einen Blick</h2>
+    <p class="section-note">Dieselben 53 Objekte, 14 Nächte,
+    Gesamtpreis in Euro inklusive Endreinigung und Buchungsgebühr.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr>
+          <th>#</th><th>Adresse</th><th>Ort</th><th>Typ</th><th>Pers.</th><th>SZ</th>
+          <th>m²</th><th>Strand</th><th>Nichtraucher</th><th>Gesamt</th>
+        </tr></thead>
+        <tbody><tr>
+<td class="num">01</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=5461&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Gammeltoft Vej 8 G</a></td>
+<td>Sønderho</td>
+<td>Wohnung</td>
+<td class="num">4</td>
+<td class="num">2</td>
+<td class="num">60</td>
+<td class="num">3,0 km</td>
+<td>ja</td>
+<td class="num">768 €</td>
+</tr><tr>
+<td class="num">02</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3245&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 42S</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">5</td>
+<td class="num">2</td>
+<td class="num">58</td>
+<td class="num">450 m</td>
+<td>ja</td>
+<td class="num">870 €</td>
+</tr><tr>
+<td class="num">03</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=5462&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Gammeltoft Vej 8 H</a></td>
+<td>Sønderho</td>
+<td>Wohnung</td>
+<td class="num">6</td>
+<td class="num">3</td>
+<td class="num">60</td>
+<td class="num">3,0 km</td>
+<td>ja</td>
+<td class="num">887 €</td>
+</tr><tr>
+<td class="num">04</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3364&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Golfstien 3 H, lejl. 30</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">5</td>
+<td class="num">2</td>
+<td class="num">71</td>
+<td class="num">300 m</td>
+<td>ja</td>
+<td class="num">924 €</td>
+</tr><tr>
+<td class="num">05</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3356&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Golfstien 1 C, lejl. 15</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">5</td>
+<td class="num">3</td>
+<td class="num">88</td>
+<td class="num">300 m</td>
+<td>ja</td>
+<td class="num">954 €</td>
+</tr><tr>
+<td class="num">06</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3353&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Golfstien 7 A. Lejl. 6</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">6</td>
+<td class="num">3</td>
+<td class="num">85</td>
+<td class="num">300 m</td>
+<td>ja</td>
+<td class="num">982 €</td>
+</tr><tr>
+<td class="num">07</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3354&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Golfstien 7 B, lejl. 7</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">6</td>
+<td class="num">3</td>
+<td class="num">85</td>
+<td class="num">300 m</td>
+<td>ja</td>
+<td class="num">997 €</td>
+</tr><tr>
+<td class="num">08</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3092&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Bjerges Leje 43</a></td>
+<td>Sønderho</td>
+<td>Haus</td>
+<td class="num">6</td>
+<td class="num">3</td>
+<td class="num">64</td>
+<td class="num">1,4 km</td>
+<td>k. A.</td>
+<td class="num">1.007 €</td>
+</tr><tr>
+<td class="num">09</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3380&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, A 219</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">4</td>
+<td class="num">2</td>
+<td class="num">48</td>
+<td class="num">20 m</td>
+<td>ja</td>
+<td class="num">1.017 €</td>
+</tr><tr>
+<td class="num">10</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3381&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, A 222</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">4</td>
+<td class="num">2</td>
+<td class="num">48</td>
+<td class="num">20 m</td>
+<td>ja</td>
+<td class="num">1.017 €</td>
+</tr><tr>
+<td class="num">11</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=9030&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, A 230</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">4</td>
+<td class="num">2</td>
+<td class="num">48</td>
+<td class="num">20 m</td>
+<td>ja</td>
+<td class="num">1.017 €</td>
+</tr><tr>
+<td class="num">12</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3386&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, A 234</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">4</td>
+<td class="num">2</td>
+<td class="num">48</td>
+<td class="num">20 m</td>
+<td>ja</td>
+<td class="num">1.017 €</td>
+</tr><tr>
+<td class="num">13</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3995&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, A 315</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">4</td>
+<td class="num">2</td>
+<td class="num">48</td>
+<td class="num">20 m</td>
+<td>ja</td>
+<td class="num">1.017 €</td>
+</tr><tr>
+<td class="num">14</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3391&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, A 321</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">4</td>
+<td class="num">2</td>
+<td class="num">48</td>
+<td class="num">20 m</td>
+<td>ja</td>
+<td class="num">1.017 €</td>
+</tr><tr>
+<td class="num">15</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3394&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, A 332</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">4</td>
+<td class="num">2</td>
+<td class="num">48</td>
+<td class="num">20 m</td>
+<td>ja</td>
+<td class="num">1.017 €</td>
+</tr><tr>
+<td class="num">16</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=5860&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, C 104</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">4</td>
+<td class="num">2</td>
+<td class="num">48</td>
+<td class="num">20 m</td>
+<td>ja</td>
+<td class="num">1.017 €</td>
+</tr><tr>
+<td class="num">17</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3396&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, C 106</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">4</td>
+<td class="num">2</td>
+<td class="num">48</td>
+<td class="num">20 m</td>
+<td>k. A.</td>
+<td class="num">1.017 €</td>
+</tr><tr>
+<td class="num">18</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3375&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, C 205</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">4</td>
+<td class="num">2</td>
+<td class="num">48</td>
+<td class="num">20 m</td>
+<td>ja</td>
+<td class="num">1.017 €</td>
+</tr><tr>
+<td class="num">19</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3399&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, C 207</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">4</td>
+<td class="num">2</td>
+<td class="num">48</td>
+<td class="num">20 m</td>
+<td>ja</td>
+<td class="num">1.017 €</td>
+</tr><tr>
+<td class="num">20</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=8518&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Strandvejen 61, C 113</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">4</td>
+<td class="num">2</td>
+<td class="num">48</td>
+<td class="num">20 m</td>
+<td>ja</td>
+<td class="num">1.087 €</td>
+</tr><tr>
+<td class="num">21</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3130&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Martin Chr.vej 3</a></td>
+<td>Nordby</td>
+<td>Haus</td>
+<td class="num">5</td>
+<td class="num">3</td>
+<td class="num">90</td>
+<td class="num">2,0 km</td>
+<td>ja</td>
+<td class="num">1.099 €</td>
+</tr><tr>
+<td class="num">22</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3358&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Golfstien 1 E, lejl. 17</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">5</td>
+<td class="num">3</td>
+<td class="num">84</td>
+<td class="num">300 m</td>
+<td>ja</td>
+<td class="num">1.105 €</td>
+</tr><tr>
+<td class="num">23</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3013&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Vester Engvej 8</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">6</td>
+<td class="num">3</td>
+<td class="num">64</td>
+<td class="num">650 m</td>
+<td>k. A.</td>
+<td class="num">1.119 €</td>
+</tr><tr>
+<td class="num">24</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=9131&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Golfstien 7E, lejl. 10</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">4</td>
+<td class="num">2</td>
+<td class="num">70</td>
+<td class="num">300 m</td>
+<td>ja</td>
+<td class="num">1.124 €</td>
+</tr><tr>
+<td class="num">25</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3016&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Vestertoft 44</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">4</td>
+<td class="num">3</td>
+<td class="num">64</td>
+<td class="num">1,2 km</td>
+<td>ja</td>
+<td class="num">1.125 €</td>
+</tr><tr>
+<td class="num">26</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=6851&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Vester Land 35</a></td>
+<td>Sønderho</td>
+<td>Haus</td>
+<td class="num">4</td>
+<td class="num">3</td>
+<td class="num">58</td>
+<td class="num">1,2 km</td>
+<td>ja</td>
+<td class="num">1.141 €</td>
+</tr><tr>
+<td class="num">27</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3357&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Golfstien 1 D, Lejl. 16</a></td>
+<td>Fanø Bad</td>
+<td>Wohnung</td>
+<td class="num">5</td>
+<td class="num">3</td>
+<td class="num">75</td>
+<td class="num">300 m</td>
+<td>ja</td>
+<td class="num">1.160 €</td>
+</tr><tr>
+<td class="num">28</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=2941&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Lodne Bjerge 6a</a></td>
+<td>Sønderho</td>
+<td>Haus</td>
+<td class="num">6</td>
+<td class="num">3</td>
+<td class="num">65</td>
+<td class="num">800 m</td>
+<td>ja</td>
+<td class="num">1.164 €</td>
+</tr><tr>
+<td class="num">29</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3101&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Hedemarken 13</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">4</td>
+<td class="num">3</td>
+<td class="num">83</td>
+<td class="num">1,1 km</td>
+<td>ja</td>
+<td class="num">1.185 €</td>
+</tr><tr>
+<td class="num">30</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=2977&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Nymarken 7</a></td>
+<td>Sønderho</td>
+<td>Haus</td>
+<td class="num">6</td>
+<td class="num">4</td>
+<td class="num">100</td>
+<td class="num">1,1 km</td>
+<td>k. A.</td>
+<td class="num">1.203 €</td>
+</tr><tr>
+<td class="num">31</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=8978&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Søstjernen 19</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">4</td>
+<td class="num">2</td>
+<td class="num">56</td>
+<td class="num">1,6 km</td>
+<td>ja</td>
+<td class="num">1.306 €</td>
+</tr><tr>
+<td class="num">32</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=8189&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Lyngbakken 22</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">4</td>
+<td class="num">2</td>
+<td class="num">64</td>
+<td class="num">550 m</td>
+<td>ja</td>
+<td class="num">1.313 €</td>
+</tr><tr>
+<td class="num">33</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3121&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Vagtbjergvej 8</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">4</td>
+<td class="num">2</td>
+<td class="num">70</td>
+<td class="num">500 m</td>
+<td>ja</td>
+<td class="num">1.358 €</td>
+</tr><tr>
+<td class="num">34</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3215&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Hasidvej 21</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">6</td>
+<td class="num">3</td>
+<td class="num">77</td>
+<td class="num">200 m</td>
+<td>k. A.</td>
+<td class="num">1.394 €</td>
+</tr><tr>
+<td class="num">35</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3081&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Blommens Toft 6</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">4</td>
+<td class="num">3</td>
+<td class="num">70</td>
+<td class="num">800 m</td>
+<td>ja</td>
+<td class="num">1.414 €</td>
+</tr><tr>
+<td class="num">36</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3011&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Præstemarken 10</a></td>
+<td>Sønderho</td>
+<td>Haus</td>
+<td class="num">6</td>
+<td class="num">3</td>
+<td class="num">120</td>
+<td class="num">1,1 km</td>
+<td>ja</td>
+<td class="num">1.423 €</td>
+</tr><tr>
+<td class="num">37</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3096&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Lodne Bjerge 39</a></td>
+<td>Sønderho</td>
+<td>Haus</td>
+<td class="num">6</td>
+<td class="num">3</td>
+<td class="num">121</td>
+<td class="num">150 m</td>
+<td>ja</td>
+<td class="num">1.434 €</td>
+</tr><tr>
+<td class="num">38</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=2779&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Bjerges Toft 20</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">5</td>
+<td class="num">3</td>
+<td class="num">79</td>
+<td class="num">1,3 km</td>
+<td>ja</td>
+<td class="num">1.442 €</td>
+</tr><tr>
+<td class="num">39</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=2814&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Vester Storetoft 28</a></td>
+<td>Sønderho</td>
+<td>Haus</td>
+<td class="num">6</td>
+<td class="num">3</td>
+<td class="num">126</td>
+<td class="num">1,3 km</td>
+<td>ja</td>
+<td class="num">1.459 €</td>
+</tr><tr>
+<td class="num">40</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=6799&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Nonboevej 49</a></td>
+<td>Fanø Bad</td>
+<td>Haus</td>
+<td class="num">6</td>
+<td class="num">3</td>
+<td class="num">66</td>
+<td class="num">650 m</td>
+<td>ja</td>
+<td class="num">1.483 €</td>
+</tr><tr>
+<td class="num">41</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3075&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Torpvej 11</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">5</td>
+<td class="num">3</td>
+<td class="num">87</td>
+<td class="num">1,2 km</td>
+<td>ja</td>
+<td class="num">1.529 €</td>
+</tr><tr>
+<td class="num">42</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3988&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Gøgevej 26</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">5</td>
+<td class="num">3</td>
+<td class="num">63</td>
+<td class="num">500 m</td>
+<td>ja</td>
+<td class="num">1.558 €</td>
+</tr><tr>
+<td class="num">43</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3036&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Bekkasinvej 19</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">6</td>
+<td class="num">3</td>
+<td class="num">93</td>
+<td class="num">400 m</td>
+<td>ja</td>
+<td class="num">1.570 €</td>
+</tr><tr>
+<td class="num">44</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=3143&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Slunden 24</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">6</td>
+<td class="num">3</td>
+<td class="num">95</td>
+<td class="num">300 m</td>
+<td>ja</td>
+<td class="num">1.613 €</td>
+</tr><tr>
+<td class="num">45</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=2946&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Helmvej 38</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">6</td>
+<td class="num">3</td>
+<td class="num">115</td>
+<td class="num">75 m</td>
+<td>ja</td>
+<td class="num">1.634 €</td>
+</tr><tr>
+<td class="num">46</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=6911&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Paradisvej 6</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">6</td>
+<td class="num">3</td>
+<td class="num">102</td>
+<td class="num">800 m</td>
+<td>ja</td>
+<td class="num">1.649 €</td>
+</tr><tr>
+<td class="num">47</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=8400&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Lyngbakken 44 A</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">6</td>
+<td class="num">3</td>
+<td class="num">107</td>
+<td class="num">800 m</td>
+<td>ja</td>
+<td class="num">1.682 €</td>
+</tr><tr>
+<td class="num">48</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=6754&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Nybyvej 44</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">6</td>
+<td class="num">4</td>
+<td class="num">118</td>
+<td class="num">500 m</td>
+<td>ja</td>
+<td class="num">1.788 €</td>
+</tr><tr>
+<td class="num">49</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=6256&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Landevejen 55 C</a></td>
+<td>Sønderho</td>
+<td>Wohnung</td>
+<td class="num">7</td>
+<td class="num">3</td>
+<td class="num">100</td>
+<td class="num">1,4 km</td>
+<td>ja</td>
+<td class="num">1.792 €</td>
+</tr><tr>
+<td class="num">50</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=4596&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Slunden 42</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">5</td>
+<td class="num">3</td>
+<td class="num">92</td>
+<td class="num">200 m</td>
+<td>ja</td>
+<td class="num">2.153 €</td>
+</tr><tr>
+<td class="num">51</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=8621&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Vindgaf 18</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">6</td>
+<td class="num">3</td>
+<td class="num">153</td>
+<td class="num">500 m</td>
+<td>ja</td>
+<td class="num">2.365 €</td>
+</tr><tr>
+<td class="num">52</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=5859&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Kløwen 10</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">6</td>
+<td class="num">3</td>
+<td class="num">83</td>
+<td class="num">300 m</td>
+<td>ja</td>
+<td class="num">2.526 €</td>
+</tr><tr>
+<td class="num">53</td>
+<td><a href="https://www.danibo.dk/de/s/ferienhaus/?id=8509&amp;start=2026-10-17&amp;end=2026-10-31" target="_blank" rel="noopener">Hasidvej 30</a></td>
+<td>Rindby</td>
+<td>Haus</td>
+<td class="num">6</td>
+<td class="num">3</td>
+<td class="num">169</td>
+<td class="num">50 m</td>
+<td>ja</td>
+<td class="num">3.442 €</td>
+</tr></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h2>Wie diese Liste entstanden ist</h2>
+    <p>Erhoben mit dem CLI-Tool <code>danibo.py</code> aus diesem Repository, das die
+    öffentliche JSON-API von danibo.dk abfragt — dieselbe Schnittstelle, die auch die
+    Website-Suche bedient. Reproduzierbar mit:</p>
+    <pre>./danibo.py search --arrival 2026-10-17 --departure 2026-10-31 \
+    --adults 2 --children 2 --sort price \
+    --with-photos --resolve-facilities --json</pre>
+    <ul class="legend">
+      <li>Preise in Euro von der deutschen Seitenversion, Gesamtpreis inklusive
+      Pflichtnebenkosten (Endreinigung, Buchungsgebühr) und abzüglich Rabatten — dieselbe
+      Zahl, die die Website anzeigt. Strom und Wasser rechnet Danibo separat bei Abreise ab.</li>
+      <li>Der exakt buchbare Betrag in DKK lässt sich pro Haus mit
+      <code>./danibo.py quote &lt;id&gt; --arrival … --departure …</code> abrufen.</li>
+      <li>Ausstattungsmerkmale kommen aus der API. Fünf davon — darunter „Nichtraucher“ —
+      gibt die Suche nicht pro Haus zurück; <code>--resolve-facilities</code> holt sie über
+      je einen zusätzlichen gefilterten Suchlauf. Nicht jedes Merkmal ist bei Danibo gepflegt:
+      „Grill“, „Terrasse“ und „eingezäunt“ sind fast überall leer, obwohl die
+      Beschreibungstexte sie nennen. Fehlendes Merkmal heißt also nicht zwingend
+      „nicht vorhanden“.</li>
+      <li>Haus oder Wohnung stammt aus dem Feld <code>type</code> der Suchergebnisse — mit
+      einer Korrektur: einzelne Golfstien-Objekte sind dort als Haus geführt, tragen aber
+      „lejl.“ (dänisch <em>lejlighed</em> = Wohnung) in der Adresse und heißen im
+      Beschreibungstext Ferienwohnung. Sie stehen hier als Wohnung.</li>
+      <li>Die Suche liefert nur tatsächlich buchbare Zeiträume — jedes gelistete Objekt war
+      zum Erhebungszeitpunkt frei. Verfügbarkeit und Preise können sich ändern; vor der
+      Buchung auf danibo.dk gegenprüfen.</li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var list = document.getElementById('list');
+  var cards = Array.prototype.slice.call(list.children);
+  var state = { house: false, ns: false, kid: false, sort: 'price' };
+  function num(el, key) { return parseFloat(el.dataset[key]) || 0; }
+  var sorters = {
+    'price':      function (a, b) { return num(a, 'price') - num(b, 'price'); },
+    'price-desc': function (a, b) { return num(b, 'price') - num(a, 'price'); },
+    'sqm':        function (a, b) { return num(b, 'sqm') - num(a, 'sqm'); },
+    'coast':      function (a, b) { return num(a, 'coast') - num(b, 'coast'); },
+    'rating':     function (a, b) { return num(b, 'rating') - num(a, 'rating'); }
+  };
+  function apply() {
+    var shown = 0;
+    cards.forEach(function (c) {
+      var ok = true;
+      if (state.house && c.dataset.type !== 'house') ok = false;
+      if (state.ns && c.dataset.ns !== '1') ok = false;
+      if (state.kid && num(c, 'kid') < 1) ok = false;
+      c.classList.toggle('hide', !ok);
+      if (ok) shown++;
+    });
+    cards.slice().sort(sorters[state.sort]).forEach(function (c) { list.appendChild(c); });
+    document.getElementById('count').textContent =
+      shown + ' von ' + cards.length + ' Objekten';
+  }
+  function toggle(id, key) {
+    var btn = document.getElementById(id);
+    btn.addEventListener('click', function () {
+      state[key] = !state[key];
+      btn.setAttribute('aria-pressed', String(state[key]));
+      apply();
+    });
+  }
+  toggle('f-house', 'house');
+  toggle('f-ns', 'ns');
+  toggle('f-kid', 'kid');
+  document.getElementById('sort').addEventListener('change', function (e) {
+    state.sort = e.target.value;
+    apply();
+  });
+  apply();
+})();
+</script>

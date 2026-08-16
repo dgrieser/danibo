@@ -1,15 +1,58 @@
 [
   {
-    "file": "fanoe-2026-herbst.html",
-    "title": "Fanø im Herbst 2026",
+    "file": "fanoe-2026-10-17_2026-10-31.html",
+    "title": "Fanø 17.–31. Oktober 2026",
     "date": "2026-08-16",
-    "summary": "Alle 53 bei Danibo buchbaren Unterkünfte für 2 Erwachsene und 2 Kinder, nach Preis sortiert — mit Fotos, Ausstattung, Lage und Nichtraucher-Status.",
-    "stay": "Sa 17.10. – Sa 31.10.2026, 14 Nächte",
+    "stay": "Sa 17. Oktober 2026 – Sa 31. Oktober 2026, 14 Nächte",
+    "summary": "Alle 53 buchbaren Unterkünfte für 2 Erwachsene und 2 Kinder, nach Preis sortiert — mit Fotos, Ausstattung, Lage und Nichtraucher-Status. Gegenüber dem Wunsch 19.10. – 1.11.: endet schon am 31.10.",
     "facts": [
       "53 Objekte · 30 Häuser, 23 Wohnungen",
       "768 – 3.442 € gesamt inkl. Nebenkosten",
       "48 mit Nichtraucher-Merkmal"
     ],
-    "data": "fanoe-2026-10-17_2026-10-31.json"
+    "highlight": false,
+    "data": "data/2026-10-17_2026-10-31.json"
+  },
+  {
+    "file": "fanoe-2026-10-17_2026-11-07.html",
+    "title": "Fanø 17. Oktober – 7. November 2026",
+    "date": "2026-08-16",
+    "stay": "Sa 17. Oktober 2026 – Sa 7. November 2026, 21 Nächte",
+    "summary": "Alle 39 buchbaren Unterkünfte für 2 Erwachsene und 2 Kinder, nach Preis sortiert — mit Fotos, Ausstattung, Lage und Nichtraucher-Status. Deckt den Wunsch 19.10. – 1.11. vollständig ab.",
+    "facts": [
+      "39 Objekte · 19 Häuser, 20 Wohnungen",
+      "1.093 – 3.431 € gesamt inkl. Nebenkosten",
+      "36 mit Nichtraucher-Merkmal"
+    ],
+    "highlight": true,
+    "data": "data/2026-10-17_2026-11-07.json"
+  },
+  {
+    "file": "fanoe-2026-10-24_2026-10-31.html",
+    "title": "Fanø 24.–31. Oktober 2026",
+    "date": "2026-08-16",
+    "stay": "Sa 24. Oktober 2026 – Sa 31. Oktober 2026, 7 Nächte",
+    "summary": "Alle 115 buchbaren Unterkünfte für 2 Erwachsene und 2 Kinder, nach Preis sortiert — mit Fotos, Ausstattung, Lage und Nichtraucher-Status. Gegenüber dem Wunsch 19.10. – 1.11.: beginnt erst am 24.10. und endet schon am 31.10.",
+    "facts": [
+      "115 Objekte · 82 Häuser, 33 Wohnungen",
+      "380 – 2.253 € gesamt inkl. Nebenkosten",
+      "108 mit Nichtraucher-Merkmal"
+    ],
+    "highlight": false,
+    "data": "data/2026-10-24_2026-10-31.json"
+  },
+  {
+    "file": "fanoe-2026-10-24_2026-11-07.html",
+    "title": "Fanø 24. Oktober – 7. November 2026",
+    "date": "2026-08-16",
+    "stay": "Sa 24. Oktober 2026 – Sa 7. November 2026, 14 Nächte",
+    "summary": "Alle 81 buchbaren Unterkünfte für 2 Erwachsene und 2 Kinder, nach Preis sortiert — mit Fotos, Ausstattung, Lage und Nichtraucher-Status. Gegenüber dem Wunsch 19.10. – 1.11.: beginnt erst am 24.10.",
+    "facts": [
+      "81 Objekte · 52 Häuser, 29 Wohnungen",
+      "705 – 3.680 € gesamt inkl. Nebenkosten",
+      "76 mit Nichtraucher-Merkmal"
+    ],
+    "highlight": false,
+    "data": "data/2026-10-24_2026-11-07.json"
   }
 ]
