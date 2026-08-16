@@ -3,6 +3,18 @@
 Ergebnisse konkreter Suchläufe mit `danibo.py`. Preise und Verfügbarkeit sind
 Momentaufnahmen — vor einer Buchung auf danibo.dk gegenprüfen.
 
+Die Berichte werden als GitHub Pages veröffentlicht:
+**<https://dgrieser.github.io/danibo/>**
+
+Ein neuer Bericht kommt als HTML-Datei in dieses Verzeichnis und wird in
+`reports.json` eingetragen — Titel, Datum, Kurzbeschreibung, Eckdaten und
+optional eine Rohdatendatei. Der Build bricht ab, wenn eine HTML-Datei hier
+liegt, die nicht im Manifest steht, oder umgekehrt. Lokale Vorschau:
+
+```sh
+python3 tools/build_site.py && python3 -m http.server -d _site
+```
+
 ## Fanø, Herbst 2026
 
 Suchauftrag: Unterkunft auf Fanø für 2 Erwachsene und 2 Kinder (8 und 11 Jahre),

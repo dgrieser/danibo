@@ -96,7 +96,7 @@ All filters of the website's "Erweiterte Suche" are supported:
   `nonsmoking`, `ev-charger`, `heatpump`, `activityroom`, `extra-toilet`,
   `luxury`
 - `--resolve-facilities`: also report the facilities the search payload
-  omits — see below
+  omits — see above
 - `--flexible`: allow flexible arrival around the requested dates
 - `--keyword`: catalogue number / street / area free-text
 - `--sort`: `price` (default), `rating`, `size`, `beach`
@@ -143,3 +143,23 @@ details and photos for 24 hours, quotes/availability for 5 minutes. Use
 # 2. verify the exact booking total for the winner:
 ./danibo.py quote <houseId> --arrival 2026-09-05 --departure 2026-09-12 --json
 ```
+
+## Results and GitHub Pages
+
+Finished searches live in [`results/`](results/) as self-contained HTML
+reports, published at **<https://dgrieser.github.io/danibo/>**.
+
+`tools/build_site.py` builds the site: it wraps each report in a proper
+document head (they are written without one), copies any raw-data files
+alongside, and generates an index from `results/reports.json`. Preview it
+locally with:
+
+```sh
+python3 tools/build_site.py && python3 -m http.server -d _site
+```
+
+The `Pages` workflow runs the same command and deploys on every push to
+`main` that touches `results/`, the build script or the workflow itself.
+It needs Pages set to "GitHub Actions" as its source under
+*Settings → Pages*; the deploy job fails with a permissions error until
+that is done.
