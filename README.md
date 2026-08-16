@@ -42,6 +42,39 @@ the price breakdown (`rentPrice`, `mandatoryProductsPrice`, `discount`,
 `totalPrice`, `currency`). Everything `/api/search` returns is available —
 add `--with-photos` to include photo URLs per house.
 
+### Facilities: what the search reports, and what it hides
+
+`/api/search` returns a per-house flag for only eleven facilities —
+`internet`, `dishwasher`, `stove`, `washer`, `dryer`, `jacuzzi`, `pool`,
+`sauna`, `whirlpool`, `ev-charger`, `activityroom`. Five more can be
+*filtered* on but are never *returned*: `nonsmoking`, `seaview`, `heatpump`,
+`extra-toilet` and `luxury`. `/api/house/<id>` does not help either — it
+answers with an empty facility list.
+
+Two things follow. Facilities you filter on are always reported, since every
+hit carries them by definition:
+
+```sh
+./danibo.py search --arrival 2026-10-17 --departure 2026-10-31 \
+    --adults 2 --children 2 --facility nonsmoking --json
+# → every house lists "nonsmoking" among its facilities
+```
+
+For the rest, `--resolve-facilities` asks the server: it repeats the same
+search once per hidden facility with that filter applied and notes which
+houses come back. That costs five extra requests and turns an unfiltered
+search into a complete facility picture:
+
+```sh
+./danibo.py search --arrival 2026-10-17 --departure 2026-10-31 \
+    --adults 2 --children 2 --resolve-facilities --json
+```
+
+Beware that Danibo does not maintain every feature. `grill`, `terrace` and
+`fenced` are empty across essentially the whole catalogue even where the
+German description text mentions them, so a missing facility means "not
+recorded", not necessarily "not there".
+
 ### Extended-search filters
 
 All filters of the website's "Erweiterte Suche" are supported:
@@ -58,9 +91,12 @@ All filters of the website's "Erweiterte Suche" are supported:
 
 - `--location`: `rindby`, `fanoe-bad`, `soenderho`, `nordby` (repeatable)
 - `--type`: `house`, `apartment`, `cluster`, `hotel`
-- `--facility` (repeatable): `washer`, `dishwasher`, `pool`, `whirlpool`,
-  `sauna`, `seaview`, `stove`, `internet`, `nonsmoking`, `ev-charger`,
-  `heatpump`, `activityroom`, `extra-toilet`, `luxury`
+- `--facility` (repeatable): `washer`, `dryer`, `dishwasher`, `pool`,
+  `whirlpool`, `jacuzzi`, `sauna`, `seaview`, `stove`, `internet`,
+  `nonsmoking`, `ev-charger`, `heatpump`, `activityroom`, `extra-toilet`,
+  `luxury`
+- `--resolve-facilities`: also report the facilities the search payload
+  omits — see below
 - `--flexible`: allow flexible arrival around the requested dates
 - `--keyword`: catalogue number / street / area free-text
 - `--sort`: `price` (default), `rating`, `size`, `beach`

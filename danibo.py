@@ -60,6 +60,8 @@ FACILITIES = {
     "seaview": 28,       # Meerblick
     "stove": 13,         # Brennofen
     "internet": 9,       # Internet
+    "dryer": 15,         # Trockner
+    "jacuzzi": 16,       # Jacuzzi
     "nonsmoking": 27,    # Nichtraucher-Haus
     "ev-charger": 20,    # Ladestecker für Elektroautos (Typ 2)
     "heatpump": 31,      # Wärmepumpe
@@ -67,6 +69,31 @@ FACILITIES = {
     "extra-toilet": 51,  # Extra Toilette / Bad
     "luxury": 47,        # Luxus Ferienhäuser
 }
+
+# Which FACILITIES keys the /api/search payload reports per house, and the raw
+# field carrying them. Verified by comparing each raw field's hit count with
+# the count from a search filtered on the matching feature id — they agree
+# exactly. Note "whirlpool" comes from the raw "spa" field: houses flagged
+# there are the ones whose German description advertises a Whirlpool, while
+# the separate raw "jacuzzi" field is feature 16.
+FACILITY_FIELDS = {
+    "internet": "internet",
+    "dishwasher": "dishWasher",
+    "stove": "stove",
+    "washer": "washer",
+    "dryer": "dryer",
+    "jacuzzi": "jacuzzi",
+    "pool": "pool",
+    "sauna": "sauna",
+    "whirlpool": "spa",
+    "ev-charger": "chargerType2",
+    "activityroom": "houseActivity",
+}
+
+# The remaining facilities are filterable but absent from the search payload,
+# so a house can only be known to have them by asking the server (see
+# resolve_facilities).
+HIDDEN_FACILITIES = sorted(set(FACILITIES) - set(FACILITY_FIELDS))
 
 # language code -> numeric languageId used by /api/period
 LANGUAGE_IDS = {"de": 1, "da": 2}
@@ -274,6 +301,28 @@ def search_houses(client, arrival, departure, adults=2, children=0, pets=0,
     return houses, alternatives, meta
 
 
+def resolve_facilities(client, facilities, search_kwargs):
+    """Find out which houses carry facilities the search payload omits.
+
+    /api/search reports only a handful of facilities per house — non-smoking,
+    sea view, heat pump and friends are filterable but never returned, and
+    /api/house/<id> leaves its facility list empty. The only way to learn them
+    is to ask: re-run the same search once per facility with that feature
+    filter on, and note which houses come back.
+
+    Returns {house_id: [facility keys]}. Costs one search per facility, so
+    callers should pass only the keys they actually want.
+    """
+    found = {}
+    for key in facilities:
+        kwargs = dict(search_kwargs)
+        kwargs["facilities"] = sorted(set(kwargs.get("facilities") or ()) | {key})
+        hits, _, _ = search_houses(client, **kwargs)
+        for h in hits:
+            found.setdefault(h["id"], []).append(key)
+    return {hid: sorted(keys) for hid, keys in found.items()}
+
+
 def get_house_details(client, house_id, language="de"):
     # House master data changes rarely; cache for a day.
     return client.get_json(f"/api/house/{house_id}", {"language": language}, cache_ttl=86400)
@@ -324,15 +373,16 @@ def house_url(house_id, arrival=None, departure=None):
     return url
 
 
-def simplify_house(h, currency):
-    """Reduce a raw search hit to a stable, AI-friendly record."""
-    facilities = sorted(k for k, v in {
-        "internet": h.get("internet"), "dishwasher": h.get("dishWasher"),
-        "stove": h.get("stove"), "washer": h.get("washer"),
-        "dryer": h.get("dryer"), "whirlpool": h.get("jacuzzi"),
-        "pool": h.get("pool"), "sauna": h.get("sauna"), "spa": h.get("spa"),
-        "ev-charger": h.get("chargerType2"), "activityroom": h.get("houseActivity"),
-    }.items() if v)
+def simplify_house(h, currency, extra_facilities=()):
+    """Reduce a raw search hit to a stable, AI-friendly record.
+
+    extra_facilities are facility keys known to hold for this house from
+    outside the payload — either because the search filtered on them or
+    because resolve_facilities looked them up.
+    """
+    facilities = sorted(
+        {k for k, field in FACILITY_FIELDS.items() if h.get(field)}
+        | set(extra_facilities))
     return {
         "id": h.get("id"),
         "name": h.get("name"),
@@ -414,8 +464,7 @@ def check_date(value):
 def cmd_search(args, client):
     if bool(args.arrival) != bool(args.departure):
         sys.exit("error: --arrival and --departure must be given together")
-    houses, alternatives, meta = search_houses(
-        client,
+    search_kwargs = dict(
         arrival=args.arrival, departure=args.departure,
         adults=args.adults, children=args.children, pets=args.pets,
         locations=args.location or None, facilities=args.facility or None,
@@ -428,8 +477,20 @@ def cmd_search(args, client):
         language=args.language, page_size=args.page_size,
         max_pages=args.max_pages,
     )
+    houses, alternatives, meta = search_houses(client, **search_kwargs)
     currency = meta["currency"]
-    records = [simplify_house(h, currency) for h in houses]
+
+    # Facilities filtered on hold for every hit by construction, so report them
+    # even though the payload never mentions them.
+    requested = set(args.facility or ())
+    resolved = {}
+    if args.resolve_facilities:
+        wanted = [k for k in HIDDEN_FACILITIES if k not in requested]
+        resolved = resolve_facilities(client, wanted, search_kwargs)
+
+    records = [simplify_house(h, currency,
+                              requested | set(resolved.get(h.get("id"), ())))
+               for h in houses]
 
     sort_keys = {
         "price": lambda r: (r["totalPrice"] is None, r["totalPrice"]),
@@ -465,8 +526,11 @@ def cmd_search(args, client):
             "returned": len(records),
             "houses": records,
         }
+        if args.resolve_facilities:
+            out["query"]["resolvedFacilities"] = True
         if args.include_alternatives:
-            out["alternativeHouses"] = [simplify_house(h, currency) for h in alternatives]
+            out["alternativeHouses"] = [simplify_house(h, currency, requested)
+                                        for h in alternatives]
             out["totalAlternatives"] = meta["totalAlternativeHouses"]
         json.dump(out, sys.stdout, ensure_ascii=False, indent=2)
         print()
@@ -594,6 +658,10 @@ def build_parser():
                    help="accommodation type (house, apartment, cluster, hotel)")
     p.add_argument("--facility", action="append", choices=sorted(FACILITIES),
                    help="required facility, repeatable (extended search checkboxes)")
+    p.add_argument("--resolve-facilities", action="store_true",
+                   help="also report the facilities the search payload omits "
+                        "(" + ", ".join(HIDDEN_FACILITIES) + "); costs one "
+                        "extra request per facility")
     p.add_argument("--bedrooms", type=int, default=1, help="minimum bedrooms (default: 1)")
     p.add_argument("--bathrooms", type=int, default=1, help="minimum bathrooms (default: 1)")
     p.add_argument("--max-price", type=int, default=0,

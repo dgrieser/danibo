@@ -28,8 +28,13 @@ Reproduzierbar mit:
 ```sh
 ./danibo.py availability 5461 --from 2026-10-01 --to 2026-11-15
 ./danibo.py search --arrival 2026-10-17 --departure 2026-10-31 \
-    --adults 2 --children 2 --sort price --with-photos --json
+    --adults 2 --children 2 --sort price \
+    --with-photos --resolve-facilities --json
 ```
+
+Die Ausstattungsmerkmale im Bericht wurden ursprünglich mit einem Hilfsskript
+erhoben, weil `/api/search` sie nicht pro Haus zurückgibt. `danibo.py` kann das
+inzwischen selbst — `--resolve-facilities` liefert dieselben Werte.
 
 ### Zwei Eigenheiten der Danibo-Daten
 
