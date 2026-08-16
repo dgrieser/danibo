@@ -18,7 +18,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 RESULTS = ROOT / "results"
-FONT = ROOT / "results" / "assets" / "fraunces-600.woff2"
+ASSETS = ROOT / "results" / "assets"
 
 TITLE_RE = re.compile(r"<title>(.*?)</title>", re.I | re.S)
 DOCTYPE_RE = re.compile(r"^\s*(<!doctype|<html\b)", re.I)
@@ -59,6 +59,7 @@ def build_reports(out):
             data_src = RESULTS / data
             if not data_src.exists():
                 sys.exit(f"error: results/{data} listed in reports.json is missing")
+            (out / data).parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(data_src, out / data)
             entry["dataSize"] = data_src.stat().st_size
 
@@ -76,12 +77,17 @@ def human(size):
     return f"{size/1e3:.0f} KB"
 
 
-def font_face(out):
-    if not FONT.exists():
-        return ""
-    shutil.copy2(FONT, out / FONT.name)
-    return ("@font-face{font-family:'Fraunces';font-style:normal;font-weight:600;"
-            f"font-display:swap;src:url({FONT.name}) format('woff2');}}")
+def copy_assets(out):
+    """Reports and index share assets/ — photos and the display face — so the
+    same relative paths resolve both in results/ and in the built site."""
+    if not ASSETS.exists():
+        return 0
+    shutil.copytree(ASSETS, out / "assets")
+    return sum(1 for p in (out / "assets").rglob("*") if p.is_file())
+
+
+FONT_FACE = ("@font-face{font-family:'Fraunces';font-style:normal;font-weight:600;"
+             "font-display:swap;src:url(assets/fraunces-600.woff2) format('woff2');}")
 
 
 INDEX_CSS = """
@@ -117,7 +123,6 @@ html{-webkit-text-size-adjust:100%}
 body{margin:0; background:var(--ground); color:var(--ink);
   font-family:var(--body); font-size:16px; line-height:1.55;
   min-height:100vh; display:flex; flex-direction:column}
-main{flex:1 0 auto}
 .wrap{max-width:760px; margin:0 auto; padding:0 24px}
 a{color:var(--accent); text-underline-offset:2px}
 a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
@@ -128,9 +133,10 @@ header .wrap{padding:52px 24px 36px}
 h1{font-family:var(--display); font-weight:600; font-size:clamp(30px,6vw,46px);
   line-height:1.05; letter-spacing:-.015em; margin:0 0 12px; text-wrap:balance}
 .dek{margin:0; color:var(--ink-2); font-size:17px; max-width:58ch}
-main{padding:36px 0 8px}
+main{flex:1 0 auto; padding:36px 0 8px}
 .report{background:var(--surface); border:1px solid var(--line);
   border-radius:var(--radius); padding:24px 26px; margin-bottom:16px}
+.report.highlight{border-color:var(--accent); box-shadow:inset 0 0 0 1px var(--accent)}
 .report h2{font-family:var(--display); font-weight:600; font-size:24px;
   margin:0 0 4px; letter-spacing:-.01em}
 .report h2 a{color:inherit; text-decoration:none}
@@ -170,7 +176,7 @@ def build_index(out, entries, repo_url):
             data = f'<a class="btn ghost" href="{html.escape(e["data"])}">Rohdaten (JSON)</a>'
             sizes.append(f"JSON {human(e['dataSize'])}")
         stay = (f'<p class="stay">{html.escape(e["stay"])}</p>' if e.get("stay") else "")
-        cards.append(f"""<article class="report">
+        cards.append(f"""<article class="report{' highlight' if e.get("highlight") else ''}">
   <h2><a href="{html.escape(e['file'])}">{html.escape(e['title'])}</a></h2>
   {stay}
   <p class="summary">{html.escape(e.get('summary', ''))}</p>
@@ -189,7 +195,7 @@ def build_index(out, entries, repo_url):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>danibo · Rechercheergebnisse</title>
-<style>{font_face(out)}{INDEX_CSS}</style>
+<style>{FONT_FACE}{INDEX_CSS}</style>
 </head>
 <body>
 <header>
@@ -231,6 +237,8 @@ def main():
     (out / ".nojekyll").write_text("", encoding="utf-8")
 
     print(f"building into {out}")
+    n = copy_assets(out)
+    print(f"  assets/  {n} file(s)")
     entries = build_reports(out)
     build_index(out, entries, "https://github.com/dgrieser/danibo")
     print(f"  index.html  ({len(entries)} report(s))")
