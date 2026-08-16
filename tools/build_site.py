@@ -16,6 +16,8 @@ import shutil
 import sys
 from pathlib import Path
 
+import theme
+
 ROOT = Path(__file__).resolve().parent.parent
 RESULTS = ROOT / "results"
 ASSETS = ROOT / "results" / "assets"
@@ -93,6 +95,7 @@ FONT_FACE = ("@font-face{font-family:'Fraunces';font-style:normal;font-weight:60
 INDEX_CSS = """
 *,*::before,*::after{box-sizing:border-box}
 :root{
+  color-scheme:light;
   --ground:#E7EAE6; --surface:#F8F9F6; --surface-2:#EFF2ED;
   --ink:#17201D; --ink-2:#586661; --ink-3:#7C8A85;
   --line:#CBD2CB; --line-soft:#DDE3DC;
@@ -105,6 +108,7 @@ INDEX_CSS = """
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
+    color-scheme:dark;
     --ground:#0E1513; --surface:#151E1B; --surface-2:#1B2622;
     --ink:#E4EAE5; --ink-2:#9CAAA4; --ink-3:#7B8983;
     --line:#2A3733; --line-soft:#222E2A;
@@ -113,6 +117,7 @@ INDEX_CSS = """
   }
 }
 :root[data-theme="dark"]{
+  color-scheme:dark;
   --ground:#0E1513; --surface:#151E1B; --surface-2:#1B2622;
   --ink:#E4EAE5; --ink-2:#9CAAA4; --ink-3:#7B8983;
   --line:#2A3733; --line-soft:#222E2A;
@@ -195,12 +200,16 @@ def build_index(out, entries, repo_url):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>danibo · Rechercheergebnisse</title>
-<style>{FONT_FACE}{INDEX_CSS}</style>
+<style>{FONT_FACE}{INDEX_CSS}{theme.CSS}</style>
+{theme.INIT}
 </head>
 <body>
 <header>
   <div class="wrap">
-    <p class="eyebrow">danibo-cli</p>
+    <div class="topline">
+      <p class="eyebrow">danibo-cli</p>
+      {theme.button()}
+    </div>
     <h1>Rechercheergebnisse</h1>
     <p class="dek">Auswertungen konkreter Suchläufe auf danibo.dk (Insel Fanø),
     erhoben mit dem CLI-Tool in diesem Repository.</p>
@@ -222,6 +231,7 @@ def build_index(out, entries, repo_url):
     <code>anreise:abreise</code>-Argument.</p>
   </div>
 </footer>
+<script>{theme.JS}</script>
 </body>
 </html>
 """

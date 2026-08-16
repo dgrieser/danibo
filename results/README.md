@@ -27,7 +27,7 @@ bei jedem Objekt stehen seine Preise in den jeweils anderen Zeiträumen.
 
 | Pfad | Inhalt |
 | --- | --- |
-| `fanoe-<anreise>_<abreise>.html` | Ein Bericht je Zeitraum: alle Treffer nach Preis sortiert, mit Fotos, Ausstattung, Lage und Nichtraucher-Status. Filter für Häuser / Nichtraucher / Pool & Aktivitätsraum, Sortierung nach Preis, Fläche, Strandnähe und Bewertung. |
+| `fanoe-<anreise>_<abreise>.html` | Ein Bericht je Zeitraum: alle Treffer nach Preis sortiert, mit Fotos, Ausstattung, Lage und Nichtraucher-Status. Filter für Häuser / Nichtraucher / Pool & Aktivitätsraum, Sortierung nach Preis, Fläche, Strandnähe und Bewertung. Jedes Objekt zeigt ein Foto zur Zeit — auf dem Handy durchwischen, am Rechner über die Pfeile. Oben rechts und in der Filterleiste schaltet ein Knopf zwischen hellem und dunklem Farbschema um; ohne Klick gilt die Systemeinstellung. |
 | `data/<anreise>_<abreise>.json` | Rohdaten je Zeitraum, inklusive Beschreibungstexten und Preisen der anderen Zeiträume. |
 | `assets/photos/` | Fotos, geteilt von allen Berichten — die Zeiträume überlappen stark, deshalb liegt jedes Bild nur einmal hier. |
 | `reports.json` | Manifest, aus dem die Pages-Übersicht gebaut wird. **Generiert** — nicht von Hand ändern. |

@@ -14,6 +14,8 @@ import re
 import sys
 from pathlib import Path
 
+import theme
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "results" / "data"
 OUT = ROOT / "results"
@@ -139,12 +141,14 @@ def dist(m):
 CSS = """
 *,*::before,*::after{box-sizing:border-box}
 :root{
+  color-scheme:light;
   --ground:#E7EAE6; --surface:#F8F9F6; --surface-2:#EFF2ED;
   --ink:#17201D; --ink-2:#586661; --ink-3:#7C8A85;
   --line:#CBD2CB; --line-soft:#DDE3DC;
   --accent:#1E5A5E; --accent-ink:#123C40; --accent-soft:#D6E3E2; --on-accent:#F8F9F6;
   --warm:#8F4526; --warm-soft:#F0DFD6;
   --straw:#9A7A2E;
+  --veil:rgba(248,249,246,.86);
   --shadow:0 1px 2px rgba(23,32,29,.06), 0 8px 24px -16px rgba(23,32,29,.35);
   --radius:3px;
   --display:'Fraunces','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;
@@ -153,22 +157,26 @@ CSS = """
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
+    color-scheme:dark;
     --ground:#0E1513; --surface:#151E1B; --surface-2:#1B2622;
     --ink:#E4EAE5; --ink-2:#9CAAA4; --ink-3:#7B8983;
     --line:#2A3733; --line-soft:#222E2A;
     --accent:#7FBDBC; --accent-ink:#A9D6D4; --accent-soft:#1B3A3A; --on-accent:#0E1513;
     --warm:#DE8B65; --warm-soft:#3A2419;
     --straw:#CFA854;
+    --veil:rgba(21,30,27,.86);
     --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.8);
   }
 }
 :root[data-theme="dark"]{
+  color-scheme:dark;
   --ground:#0E1513; --surface:#151E1B; --surface-2:#1B2622;
   --ink:#E4EAE5; --ink-2:#9CAAA4; --ink-3:#7B8983;
   --line:#2A3733; --line-soft:#222E2A;
   --accent:#7FBDBC; --accent-ink:#A9D6D4; --accent-soft:#1B3A3A; --on-accent:#0E1513;
   --warm:#DE8B65; --warm-soft:#3A2419;
   --straw:#CFA854;
+  --veil:rgba(21,30,27,.86);
   --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.8);
 }
 html{-webkit-text-size-adjust:100%}
@@ -249,16 +257,44 @@ select.ctl{text-transform:none; letter-spacing:0; padding-right:26px}
   border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;
   box-shadow:var(--shadow)}
 .card.hide{display:none}
-.gallery{background:var(--surface-2); border-right:1px solid var(--line-soft);
-  display:grid; grid-template-rows:1fr auto; min-height:260px}
-.gallery .hero{display:block; width:100%; height:100%; min-height:200px;
-  object-fit:cover; background:var(--surface-2)}
-.gallery .strip{display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
-  background:var(--line-soft)}
-.gallery .strip img{display:block; width:100%; aspect-ratio:1/1; object-fit:cover;
-  background:var(--surface-2)}
-.gallery .noimg{aspect-ratio:4/3; display:grid; place-items:center; color:var(--ink-3);
-  font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase}
+.gallery{position:relative; overflow:hidden; background:var(--surface-2);
+  border-right:1px solid var(--line-soft); min-height:260px}
+.gallery .track{position:absolute; inset:0; display:flex; overflow-x:auto;
+  overflow-y:hidden; scroll-snap-type:x mandatory; overscroll-behavior-x:contain;
+  -webkit-overflow-scrolling:touch; scrollbar-width:none; -ms-overflow-style:none}
+.gallery .track::-webkit-scrollbar{display:none}
+.gallery .track:focus-visible{outline:2px solid var(--accent); outline-offset:-3px}
+.gallery img{flex:0 0 100%; width:100%; height:100%; object-fit:cover;
+  scroll-snap-align:center; scroll-snap-stop:always; background:var(--surface-2);
+  -webkit-user-select:none; user-select:none}
+.gallery .nav{position:absolute; top:50%; z-index:2; transform:translateY(-50%);
+  width:34px; height:34px; padding:0; border-radius:100px; border:1px solid var(--line);
+  background:var(--veil); color:var(--ink); cursor:pointer; display:grid;
+  place-items:center; opacity:0; transition:opacity .15s,border-color .15s;
+  -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px)}
+.gallery .nav:hover{border-color:var(--accent); color:var(--accent)}
+.card:hover .nav,.gallery:hover .nav,.gallery:focus-within .nav{opacity:1}
+.gallery .nav.prev{left:9px}
+.gallery .nav.next{right:9px}
+.gallery .nav svg{width:16px; height:16px; fill:none; stroke:currentColor;
+  stroke-width:2; stroke-linecap:round; stroke-linejoin:round}
+@media (hover:none){.gallery .nav{display:none}}
+.gallery .dots{position:absolute; left:0; right:0; bottom:5px; z-index:2;
+  display:flex; justify-content:center}
+.gallery .dot{width:18px; height:18px; padding:0; border:0; background:none;
+  cursor:pointer; display:grid; place-items:center}
+.gallery .dot::before{content:""; width:6px; height:6px; border-radius:100px;
+  background:rgba(255,255,255,.55); box-shadow:0 0 0 1px rgba(0,0,0,.35);
+  transition:transform .15s,background .15s}
+.gallery .dot[aria-current="true"]::before{background:#fff; transform:scale(1.34)}
+.gallery .dot:focus-visible{outline:2px solid #fff; outline-offset:-2px; border-radius:100px}
+.gallery .count{position:absolute; top:8px; right:8px; z-index:2;
+  font-family:var(--mono); font-size:10.5px; font-variant-numeric:tabular-nums;
+  color:var(--ink-2); background:var(--veil); border:1px solid var(--line);
+  border-radius:100px; padding:2px 8px}
+.gallery .noimg{position:absolute; inset:0; display:grid; place-items:center;
+  color:var(--ink-3); font-family:var(--mono); font-size:11px; letter-spacing:.1em;
+  text-transform:uppercase}
 .body{padding:18px 22px 20px; min-width:0}
 .head{display:flex; gap:14px; align-items:flex-start; flex-wrap:wrap}
 .rank{font-family:var(--mono); font-size:12px; color:var(--ink-3);
@@ -337,8 +373,7 @@ pre{font-family:var(--mono); font-size:12.5px; line-height:1.65;
 @media (max-width:820px){
   .card{grid-template-columns:1fr}
   .gallery{border-right:none; border-bottom:1px solid var(--line-soft);
-    min-height:0; grid-template-rows:auto auto}
-  .gallery .hero{aspect-ratio:16/9; height:auto; min-height:0}
+    min-height:0; aspect-ratio:16/10}
   .specs{grid-template-columns:repeat(2,1fr)}
   .price{text-align:left}
   .wrap{padding:0 18px}
@@ -349,8 +384,147 @@ pre{font-family:var(--mono); font-size:12.5px; line-height:1.65;
 """
 
 
+# Plain JavaScript, kept out of the f-string that assembles the page so it does
+# not have to be written with doubled braces.
+PAGE_JS = """
+var galleries = (function () {
+  var smooth = !(window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  var all = [];
+
+  function setup(box) {
+    var track = box.querySelector('.track');
+    var dots = Array.prototype.slice.call(box.querySelectorAll('.dot'));
+    var counter = box.querySelector('.count b');
+    var n = track.children.length;
+    var pending = 0;
+
+    function width() { return track.clientWidth || 1; }
+    function at() {
+      return Math.max(0, Math.min(n - 1, Math.round(track.scrollLeft / width())));
+    }
+    function mark() {
+      var i = at();
+      for (var j = 0; j < dots.length; j++) {
+        dots[j].setAttribute('aria-current', j === i ? 'true' : 'false');
+      }
+      if (counter) counter.textContent = String(i + 1);
+    }
+    function go(i) {
+      i = (i % n + n) % n;
+      var left = i * width();
+      if (track.scrollTo && smooth) track.scrollTo({ left: left, behavior: 'smooth' });
+      else track.scrollLeft = left;
+    }
+
+    track.addEventListener('scroll', function () {
+      if (pending) return;
+      pending = window.requestAnimationFrame(function () { pending = 0; mark(); });
+    }, { passive: true });
+    track.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(at() + 1); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); go(at() - 1); }
+    });
+    var prev = box.querySelector('.nav.prev'), next = box.querySelector('.nav.next');
+    if (prev) prev.addEventListener('click', function () { go(at() - 1); });
+    if (next) next.addEventListener('click', function () { go(at() + 1); });
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { go(i); });
+    });
+    return mark;
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-gallery]'),
+    function (box) { all.push(setup(box)); });
+
+  // Re-sorting moves the cards in the DOM, which resets every strip to its
+  // first photo without firing a scroll event — so re-read them by hand.
+  return { sync: function () { all.forEach(function (mark) { mark(); }); } };
+})();
+
+(function () {
+  var list = document.getElementById('list');
+  var cards = Array.prototype.slice.call(list.children);
+  var state = { house: false, ns: false, kid: false, sort: 'price' };
+  function num(el, key) { return parseFloat(el.dataset[key]) || 0; }
+  var sorters = {
+    'price':      function (a, b) { return num(a, 'price') - num(b, 'price'); },
+    'price-desc': function (a, b) { return num(b, 'price') - num(a, 'price'); },
+    'sqm':        function (a, b) { return num(b, 'sqm') - num(a, 'sqm'); },
+    'coast':      function (a, b) { return num(a, 'coast') - num(b, 'coast'); },
+    'rating':     function (a, b) { return num(b, 'rating') - num(a, 'rating'); }
+  };
+  function apply(reordered) {
+    var shown = 0;
+    cards.forEach(function (c) {
+      var ok = true;
+      if (state.house && c.dataset.type !== 'house') ok = false;
+      if (state.ns && c.dataset.ns !== '1') ok = false;
+      if (state.kid && num(c, 'kid') < 1) ok = false;
+      c.classList.toggle('hide', !ok);
+      if (ok) shown++;
+    });
+    cards.slice().sort(sorters[state.sort]).forEach(function (c) { list.appendChild(c); });
+    if (reordered) galleries.sync();
+    document.getElementById('count').textContent =
+      shown + ' von ' + cards.length + ' Objekten';
+  }
+  function toggle(id, key) {
+    var btn = document.getElementById(id);
+    btn.addEventListener('click', function () {
+      state[key] = !state[key];
+      btn.setAttribute('aria-pressed', String(state[key]));
+      apply(true);
+    });
+  }
+  toggle('f-house', 'house');
+  toggle('f-ns', 'ns');
+  toggle('f-kid', 'kid');
+  document.getElementById('sort').addEventListener('change', function (e) {
+    state.sort = e.target.value;
+    apply(true);
+  });
+  apply(false);
+})();
+"""
+
+
 def spec(label, value):
     return f"<div><dt>{label}</dt><dd>{value}</dd></div>"
+
+
+CHEVRON = ('<svg viewBox="0 0 24 24" aria-hidden="true">'
+           '<path d="M{a} 5 {b} 12 {a} 19"/></svg>')
+
+
+def gallery(photos, label):
+    """One photo at a time: a scroll-snapping strip the reader swipes on touch
+    and steps through with the arrows on a pointer device."""
+    if not photos:
+        return '<div class="gallery"><div class="noimg">kein Bild</div></div>'
+
+    n = len(photos)
+    slides = "".join(
+        f'<img src="{PHOTO_DIR}/{esc(p)}" alt="{esc(label)} — Bild {i} von {n}" '
+        f'loading="lazy" decoding="async" draggable="false">'
+        for i, p in enumerate(photos, 1))
+    track = (f'<div class="track" tabindex="0" role="group" '
+             f'aria-roledescription="Bildergalerie" '
+             f'aria-label="{esc(label)}: {n} Foto{"s" if n != 1 else ""}">{slides}</div>')
+    if n == 1:
+        return f'<div class="gallery" data-gallery>{track}</div>'
+
+    nav = (f'<button type="button" class="nav prev" aria-label="Vorheriges Bild">'
+           f'{CHEVRON.format(a=15, b=8)}</button>'
+           f'<button type="button" class="nav next" aria-label="Nächstes Bild">'
+           f'{CHEVRON.format(a=9, b=16)}</button>')
+    dots = "".join(
+        f'<button type="button" class="dot" aria-label="Bild {i + 1} von {n}"'
+        + (' aria-current="true"' if i == 0 else "") + "></button>"
+        for i in range(n))
+    return (f'<div class="gallery" data-gallery>{track}{nav}'
+            f'<div class="dots">{dots}</div>'
+            f'<span class="count" aria-hidden="true"><b>1</b>/{n}</span></div>')
 
 
 def card(rank, rec, period_files):
@@ -360,15 +534,7 @@ def card(rank, rec, period_files):
     nights = rec["nights"]
     per_night = rec["totalPrice"] / nights if nights else 0
     photos = rec.get("photoFiles") or []
-
-    if photos:
-        strip = "".join(f'<img src="{PHOTO_DIR}/{esc(p)}" alt="" loading="lazy">'
-                        for p in photos[1:])
-        gal = (f'<img class="hero" src="{PHOTO_DIR}/{esc(photos[0])}" '
-               f'alt="{esc(typ)} {esc(rec["name"])}, {esc(rec["location"])}" loading="lazy">'
-               + (f'<div class="strip">{strip}</div>' if strip else ""))
-    else:
-        gal = '<div class="noimg">kein Bild</div>'
+    gal = gallery(photos, f'{typ} {rec["address"]}, {rec["location"]}')
 
     if "nonsmoking" in facilities:
         ns = '<span class="chip ns">Nichtraucher</span>'
@@ -408,7 +574,7 @@ def card(rank, rec, period_files):
          data-price="{rec['totalPrice']:.0f}" data-sqm="{rec['squareMeters']}"
          data-coast="{rec['distanceToCoastM']}" data-rating="{rec['rating']}"
          data-kid="{kid}">
-  <div class="gallery">{gal}</div>
+  {gal}
   <div class="body">
     <div class="head">
       <span class="rank">{rank:02d}</span>
@@ -485,11 +651,15 @@ def build(ds, datasets, period_files):
 
     return f"""<title>{esc(title)}</title>
 <style>@font-face{{font-family:'Fraunces';font-style:normal;font-weight:600;
-font-display:swap;src:url({FONT_URL}) format('woff2');}}{CSS}</style>
+font-display:swap;src:url({FONT_URL}) format('woff2');}}{CSS}{theme.CSS}</style>
+{theme.INIT}
 
 <header class="masthead">
   <div class="wrap">
-    <p class="eyebrow"><a href="index.html">Übersicht</a> · <b>Danibo</b> · Fanø, Dänemark</p>
+    <div class="topline">
+      <p class="eyebrow"><a href="index.html">Übersicht</a> · <b>Danibo</b> · Fanø, Dänemark</p>
+      {theme.button()}
+    </div>
     <h1>{esc(title)}</h1>
     <p class="dek">Alle {len(houses)} bei Danibo buchbaren Unterkünfte von
     {long_date(ds['arrival'])} bis {long_date(ds['departure'])} für zwei Erwachsene
@@ -553,6 +723,7 @@ font-display:swap;src:url({FONT_URL}) format('woff2');}}{CSS}</style>
       <option value="rating">Sortierung: Bewertung</option>
     </select>
     <span class="count" id="count"></span>
+    {theme.button("in-controls")}
   </div>
 </div>
 
@@ -609,51 +780,7 @@ font-display:swap;src:url({FONT_URL}) format('woff2');}}{CSS}</style>
   </div>
 </footer>
 
-<script>
-(function () {{
-  var list = document.getElementById('list');
-  var cards = Array.prototype.slice.call(list.children);
-  var state = {{ house: false, ns: false, kid: false, sort: 'price' }};
-  function num(el, key) {{ return parseFloat(el.dataset[key]) || 0; }}
-  var sorters = {{
-    'price':      function (a, b) {{ return num(a, 'price') - num(b, 'price'); }},
-    'price-desc': function (a, b) {{ return num(b, 'price') - num(a, 'price'); }},
-    'sqm':        function (a, b) {{ return num(b, 'sqm') - num(a, 'sqm'); }},
-    'coast':      function (a, b) {{ return num(a, 'coast') - num(b, 'coast'); }},
-    'rating':     function (a, b) {{ return num(b, 'rating') - num(a, 'rating'); }}
-  }};
-  function apply() {{
-    var shown = 0;
-    cards.forEach(function (c) {{
-      var ok = true;
-      if (state.house && c.dataset.type !== 'house') ok = false;
-      if (state.ns && c.dataset.ns !== '1') ok = false;
-      if (state.kid && num(c, 'kid') < 1) ok = false;
-      c.classList.toggle('hide', !ok);
-      if (ok) shown++;
-    }});
-    cards.slice().sort(sorters[state.sort]).forEach(function (c) {{ list.appendChild(c); }});
-    document.getElementById('count').textContent =
-      shown + ' von ' + cards.length + ' Objekten';
-  }}
-  function toggle(id, key) {{
-    var btn = document.getElementById(id);
-    btn.addEventListener('click', function () {{
-      state[key] = !state[key];
-      btn.setAttribute('aria-pressed', String(state[key]));
-      apply();
-    }});
-  }}
-  toggle('f-house', 'house');
-  toggle('f-ns', 'ns');
-  toggle('f-kid', 'kid');
-  document.getElementById('sort').addEventListener('change', function (e) {{
-    state.sort = e.target.value;
-    apply();
-  }});
-  apply();
-}})();
-</script>"""
+<script>{PAGE_JS}{theme.JS}</script>"""
 
 
 def main():

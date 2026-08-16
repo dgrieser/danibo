@@ -163,7 +163,9 @@ python3 tools/build_site.py && python3 -m http.server -d _site
 Only step 1 goes to the network. `build_site.py` wraps each report in a
 proper document head (they are written without one), copies `results/assets`
 and the raw-data files alongside, and generates the index from the manifest.
-Adding a period is one more `arrival:departure` argument in step 1.
+`tools/theme.py` is not a step of its own — it holds the light/dark switch
+that both builders embed. Adding a period is one more `arrival:departure`
+argument in step 1.
 
 The `Pages` workflow runs the same command and deploys on every push to
 `main` that touches `results/`, the build script or the workflow itself.
